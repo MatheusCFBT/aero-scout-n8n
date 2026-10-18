@@ -1,0 +1,515 @@
+{
+  "preview": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 0,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  },
+  "send": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  },
+  "empty": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 2,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      }
+    ]
+  },
+  "invalid": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "partial",
+        "offerCount": 23,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  },
+  "partial": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 3,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  },
+  "failed": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 2,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      }
+    ]
+  },
+  "recovered": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 3
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  },
+  "timeout": {
+    "equal": true,
+    "failed": false,
+    "messageCount": 3,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  },
+  "deliveryFailure": {
+    "equal": true,
+    "failed": true,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 24,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 18,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 16,
+        "warningCount": 2
+      }
+    ]
+  }
+}

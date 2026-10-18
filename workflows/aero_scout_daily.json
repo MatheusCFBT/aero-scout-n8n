@@ -1,0 +1,306 @@
+{
+  "id": "AeroScoutDaily20261017",
+  "name": "Aero Scout — ofertas diárias e Telegram",
+  "nodes": [
+    {
+      "id": "aero-1",
+      "name": "Receber comandos",
+      "type": "CUSTOM.telegramPollingTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "allowedChatId": "",
+        "intervalSeconds": 15
+      }
+    },
+    {
+      "id": "aero-2",
+      "name": "Todos os dias às 22h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 22 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aero-3",
+      "name": "Configuração",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        80
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "chat",
+              "name": "chatId",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "id": "preview",
+              "name": "dryRun",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "time",
+              "name": "searchedAt",
+              "type": "string",
+              "value": "={{ $now.toISO() }}"
+            },
+            {
+              "id": "today",
+              "name": "today",
+              "type": "string",
+              "value": "={{ $now.setZone('America/Sao_Paulo').toISODate() }}"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-4",
+      "name": "Interpretar pedido",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        80
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/configuration. Edit the source, then run npm run build.\n\nconst dates = (function createDateHelpers() {\n  const MILLISECONDS_PER_DAY = 86_400_000;\n\n  function day(isoDate) {\n    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(isoDate)) {\n      throw Error(\"Data inválida\");\n    }\n\n    const timestamp = Date.parse(isoDate + \"T00:00:00Z\");\n    const isValid =\n      Number.isFinite(timestamp) &&\n      new Date(timestamp).toISOString().slice(0, 10) === isoDate;\n\n    if (!isValid) {\n      throw Error(\"Data inválida\");\n    }\n    return timestamp;\n  }\n\n  function addMonths(isoDate, months) {\n    const date = new Date(day(isoDate));\n    const originalDay = date.getUTCDate();\n    date.setUTCDate(1);\n    date.setUTCMonth(date.getUTCMonth() + months);\n\n    const lastDayOfMonth = new Date(\n      Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, 0),\n    ).getUTCDate();\n    date.setUTCDate(Math.min(originalDay, lastDayOfMonth));\n    return date.toISOString().slice(0, 10);\n  }\n\n  function tripDuration(departure, returnDate) {\n    return (day(returnDate) - day(departure)) / MILLISECONDS_PER_DAY;\n  }\n\n  return { day, addMonths, tripDuration };\n})({\n\n});\n\nconst text = (function createTextHelpers() {\n  function normalize(value) {\n    return String(value ?? \"\")\n      .normalize(\"NFKC\")\n      .replace(/\\s+/g, \" \")\n      .trim();\n  }\n\n  function escapeHtml(value) {\n    return String(value)\n      .replace(/&/g, \"&amp;\")\n      .replace(/</g, \"&lt;\")\n      .replace(/>/g, \"&gt;\")\n      .replace(/\"/g, \"&quot;\");\n  }\n\n  return { normalize, escapeHtml };\n})({\n\n});\n\nconst settings = (function createSettings() {\n  return {\n    categories: [\"nacionais\", \"internacionais\"],\n    origins: [\"GRU\", \"CGH\"],\n    timezone: \"America/Sao_Paulo\",\n    currency: \"BRL\",\n    horizonMonths: 6,\n    minimumTripDays: 3,\n    maximumTripDays: 14,\n    offerLimit: 10,\n    maximumAttempts: 3,\n    retryDelaySeconds: 3,\n    requestTimeoutMs: 60_000,\n    executionTimeoutSeconds: 1_200,\n    userAgent:\n      \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \" +\n      \"(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\",\n    acceptLanguage: \"pt-BR,pt;q=0.9\",\n    telegram: {\n      messageBudget: 3_800,\n      partLabelReserve: 40,\n      warningLimit: 6,\n      warningLength: 240,\n    },\n  };\n})({\n\n});\n\nconst commands = (function createTelegramCommands({ dates, text, settings }) {\n  const help = \"Use /ofertas Brasil DD/MM/AA - DD/MM/AA ou BR.\\nAs datas definem a janela completa da viagem. Origens: \" + settings.origins.join(\" e \") + \".\";\n\n  function parseDate(value) {\n    const [day, month, year] = value.split(\"/\");\n    const iso = \"20\" + year + \"-\" + month + \"-\" + day;\n    dates.day(iso);\n    return iso;\n  }\n\n  function parse(configuration) {\n    if (configuration.mode !== \"telegram\") {\n      return { ...configuration, action: \"search\", mode: \"daily\" };\n    }\n    if (String(configuration.requestChatId) !== String(configuration.chatId)) {\n      return null;\n    }\n    const command = String(configuration.text || \"\").trim();\n    const match = command.match(/^\\/(ofertas|start|ajuda)(?:@([a-z0-9_]+))?(?:\\s+([\\s\\S]*))?$/i);\n    if (!match || (match[2] && match[2].toLowerCase() !== \"detectiveflightbot\")) {\n      return null;\n    }\n    function reply(error = \"\") {\n      return {\n        ...configuration,\n        action: \"reply\",\n        category: \"controle\",\n        status: \"complete\",\n        text: (error ? text.escapeHtml(error) + \"\\n\\n\" : \"\") + help,\n      };\n    }\n    if (match[1].toLowerCase() !== \"ofertas\") {\n      return reply();\n    }\n    try {\n      const parameters = (match[3] || \"\").match(\n        /^(Brasil|BR)\\s+(\\d{2}\\/\\d{2}\\/\\d{2})\\s*[-–—]\\s*(\\d{2}\\/\\d{2}\\/\\d{2})$/i,\n      );\n      if (!parameters) {\n        throw Error(\"Comando inválido. Informe Brasil ou BR e duas datas no padrão DD/MM/AA.\");\n      }\n      const startDate = parseDate(parameters[2]);\n      const endDate = parseDate(parameters[3]);\n      if (startDate < configuration.today) {\n        throw Error(\"A data inicial não pode estar no passado.\");\n      }\n      const maximumTripDays = dates.tripDuration(startDate, endDate);\n      if (maximumTripDays <= 0) {\n        throw Error(\"O término deve ser posterior ao início.\");\n      }\n      const departureEndDate = new Date(dates.day(endDate) - 86_400_000)\n        .toISOString().slice(0, 10);\n      return {\n        ...configuration,\n        action: \"search\",\n        mode: \"command\",\n        originCountry: \"Brasil\",\n        startDate,\n        endDate,\n        departureEndDate,\n        minimumTripDays: 1,\n        maximumTripDays,\n        requestId: String(configuration.updateId),\n      };\n    } catch (error) {\n      return reply(error.message);\n    }\n  }\n  return { parse };\n})({\ndates: dates,\ntext: text,\nsettings: settings\n});\n\nreturn (function execute({ input }, { commands }) {\n  return input.all().flatMap(({ json }) => {\n    const result = commands.parse(json);\n    return result ? [{ json: result }] : [];\n  });\n})({ input: $input, now: $now, nodes: {  } }, { commands: commands });\n"
+      }
+    },
+    {
+      "id": "aero-5",
+      "name": "Pesquisar?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        680,
+        80
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "search",
+              "leftValue": "={{ $json.action === 'search' }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-6",
+      "name": "Preparar consultas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        900,
+        80
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/prepareSearch. Edit the source, then run npm run build.\n\nconst protocol = (function createFlightProtocol() {\n  const WIRE_TYPES = { INTEGER: 0, FIXED_64: 1, BYTES: 2, FIXED_32: 5 };\n  const VARINT_BASE = 128;\n  const VARINT_DATA_MASK = 127;\n  const VARINT_CONTINUATION = 128;\n  const MAX_VARINT_BYTES = 10;\n  // These are encoded protobuf tags (field number * 8 + wire type), not field numbers.\n  const TAGS = { FLIGHT_LEG: 26, DATE: 18, ORIGIN: 106, DESTINATION: 114 };\n\n  function fields(bytes) {\n    let offset = 0;\n    const result = [];\n\n    function readInteger() {\n      let value = 0;\n      let shift = 0;\n      for (let index = 0; index < MAX_VARINT_BYTES; index += 1) {\n        if (offset >= bytes.length) {\n          throw Error(\"Parâmetro truncado\");\n        }\n        const byte = bytes[offset++];\n        value += (byte & VARINT_DATA_MASK) * 2 ** shift;\n        if (!(byte & VARINT_CONTINUATION)) {\n          return value;\n        }\n        shift += 7;\n      }\n      throw Error(\"Parâmetro inválido\");\n    }\n\n    while (offset < bytes.length) {\n      const start = offset;\n      const key = readInteger();\n      const wireType = key % 8;\n      let data;\n\n      if (wireType === WIRE_TYPES.BYTES) {\n        const length = readInteger();\n        if (!Number.isSafeInteger(length) || offset + length > bytes.length) {\n          throw Error(\"Comprimento inválido\");\n        }\n        data = bytes.subarray(offset, offset + length);\n        offset += length;\n      } else if (wireType === WIRE_TYPES.INTEGER) {\n        readInteger();\n      } else if (wireType === WIRE_TYPES.FIXED_64) {\n        offset += 8;\n      } else if (wireType === WIRE_TYPES.FIXED_32) {\n        offset += 4;\n      } else {\n        throw Error(\"Formato de parâmetro desconhecido\");\n      }\n\n      if (offset > bytes.length) {\n        throw Error(\"Parâmetro truncado\");\n      }\n      result.push({ key, data, raw: bytes.subarray(start, offset) });\n    }\n    return result;\n  }\n\n  function encodeInteger(value) {\n    const bytes = [];\n    do {\n      const continuation = value >= VARINT_BASE ? VARINT_CONTINUATION : 0;\n      bytes.push((value % VARINT_BASE) | continuation);\n      value = Math.floor(value / VARINT_BASE);\n    } while (value);\n    return Buffer.from(bytes);\n  }\n\n  function field(tag, data) {\n    return Buffer.concat([encodeInteger(tag), encodeInteger(data.length), data]);\n  }\n\n  function airportLocation(origin) {\n    // The public URL represents an IATA airport as location type 1 and a three-byte code.\n    return Buffer.from([8, 1, 18, 3, ...Buffer.from(origin)]);\n  }\n\n  function integerField(tag, value) {\n    if (!Number.isSafeInteger(value) || value < 0) {\n      throw Error(\"Inteiro inválido\");\n    }\n    return Buffer.concat([encodeInteger(tag), encodeInteger(value)]);\n  }\n\n  return { fields, field, integerField, airportLocation, tags: TAGS };\n})({\n\n});\n\nconst settings = (function createSettings() {\n  return {\n    categories: [\"nacionais\", \"internacionais\"],\n    origins: [\"GRU\", \"CGH\"],\n    timezone: \"America/Sao_Paulo\",\n    currency: \"BRL\",\n    horizonMonths: 6,\n    minimumTripDays: 3,\n    maximumTripDays: 14,\n    offerLimit: 10,\n    maximumAttempts: 3,\n    retryDelaySeconds: 3,\n    requestTimeoutMs: 60_000,\n    executionTimeoutSeconds: 1_200,\n    userAgent:\n      \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \" +\n      \"(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\",\n    acceptLanguage: \"pt-BR,pt;q=0.9\",\n    telegram: {\n      messageBudget: 3_800,\n      partLabelReserve: 40,\n      warningLimit: 6,\n      warningLength: 240,\n    },\n  };\n})({\n\n});\n\nconst dates = (function createDateHelpers() {\n  const MILLISECONDS_PER_DAY = 86_400_000;\n\n  function day(isoDate) {\n    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(isoDate)) {\n      throw Error(\"Data inválida\");\n    }\n\n    const timestamp = Date.parse(isoDate + \"T00:00:00Z\");\n    const isValid =\n      Number.isFinite(timestamp) &&\n      new Date(timestamp).toISOString().slice(0, 10) === isoDate;\n\n    if (!isValid) {\n      throw Error(\"Data inválida\");\n    }\n    return timestamp;\n  }\n\n  function addMonths(isoDate, months) {\n    const date = new Date(day(isoDate));\n    const originalDay = date.getUTCDate();\n    date.setUTCDate(1);\n    date.setUTCMonth(date.getUTCMonth() + months);\n\n    const lastDayOfMonth = new Date(\n      Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, 0),\n    ).getUTCDate();\n    date.setUTCDate(Math.min(originalDay, lastDayOfMonth));\n    return date.toISOString().slice(0, 10);\n  }\n\n  function tripDuration(departure, returnDate) {\n    return (day(returnDate) - day(departure)) / MILLISECONDS_PER_DAY;\n  }\n\n  return { day, addMonths, tripDuration };\n})({\n\n});\n\nconst queries = (function createFlightQueries({ protocol, settings, templates, dates }) {\n  function replaceOriginAndRemoveDate(leg, origin, originTag) {\n    const preservedFields = protocol\n      .fields(leg)\n      .filter(({ key }) => key !== protocol.tags.DATE && key !== originTag)\n      .map(({ raw }) => raw);\n    preservedFields.push(protocol.field(originTag, protocol.airportLocation(origin)));\n    return protocol.field(protocol.tags.FLIGHT_LEG, Buffer.concat(preservedFields));\n  }\n\n  function makeQuery(category, origin, context = {}) {\n    if (!settings.origins.includes(origin) || !templates[category]) {\n      throw Error(\"Pesquisa não configurada\");\n    }\n\n    let legIndex = 0;\n    const templateBytes = Buffer.from(templates[category].tfs, \"base64url\");\n    const queryParts = protocol.fields(templateBytes).map(({ key, data, raw }) => {\n      if (key !== protocol.tags.FLIGHT_LEG) {\n        return raw;\n      }\n      // The requested origin is the departure location outbound and the arrival location inbound.\n      const originTag = legIndex++ === 0 ? protocol.tags.ORIGIN : protocol.tags.DESTINATION;\n      return replaceOriginAndRemoveDate(data, origin, originTag);\n    });\n\n    if (context.mode === \"command\") {\n      // Encoded protobuf tags in the public Google URL: custom departure range + duration.\n      const tags = {\n        WINDOW: 218, WRAPPER: 10, RANGE: 18, START: 10, END: 18,\n        DURATION: 42, MINIMUM: 8, MAXIMUM: 16,\n      };\n      const duration = dates.tripDuration(context.startDate, context.endDate);\n      if (duration < 1 || duration !== context.maximumTripDays ||\n          context.minimumTripDays !== 1 ||\n          dates.tripDuration(context.departureEndDate, context.endDate) !== 1) {\n        throw Error(\"Janela inválida\");\n      }\n      for (let index = queryParts.length - 1; index >= 0; index -= 1) {\n        if (protocol.fields(queryParts[index])[0].key === tags.WINDOW) {\n          queryParts.splice(index, 1);\n        }\n      }\n      const range = protocol.field(tags.RANGE, Buffer.concat([\n        protocol.field(tags.START, Buffer.from(context.startDate)),\n        protocol.field(tags.END, Buffer.from(context.departureEndDate)),\n      ]));\n      const length = protocol.field(tags.DURATION, Buffer.concat([\n        protocol.integerField(tags.MINIMUM, 1),\n        protocol.integerField(tags.MAXIMUM, duration),\n      ]));\n      queryParts.push(protocol.field(tags.WINDOW,\n        protocol.field(tags.WRAPPER, Buffer.concat([range, length]))));\n    }\n    const encodedQuery = Buffer.concat(queryParts).toString(\"base64url\");\n    return (\n      \"https://www.google.com/travel/flights/deals?hl=pt-BR&gl=BR&curr=BRL&tfs=\" +\n      encodedQuery\n    );\n  }\n\n  return { makeQuery };\n})({\nprotocol: protocol,\nsettings: settings,\ndates: dates,\ntemplates: {\n  \"nacionais\": {\n    \"tfs\": \"CBwQBhqHAxIKMjAyNi0xMS0wMmoHCAESA0dSVXIMCAMSCC9tLzA2Z21ycg0IAxIJL20vMDl3d2xqchEIAxINL2cvMTFiYzZ4bHBwZHIMCAMSCC9tLzAyXzluchAIAxIML2cvMXB4eWN0eHJncgwIAxIIL20vMDFoeV9yDAgDEggvbS8wbDNxMnINCAMSCS9tLzAxNzU3NXINCAMSCS9tLzAyOG1wcnINCAMSCS9tLzAzMGNybXINCAMSCS9tLzAzZHo2aHINCAMSCS9tLzAyYmtrM3INCAMSCS9tLzA0NDJ5aHINCAMSCS9tLzAyYmZmOXINCAMSCS9tLzAxbTR0X3INCAMSCS9tLzAxaHk5ZHINCAMSCS9tLzAxaHk4NHINCAMSCS9tLzAxenBrcHIQCAMSDC9nLzFweHl5engzcnINCAMSCS9tLzAzM3loa3IRCAMSDS9nLzExYjZfazN2NjlyDQgDEgkvbS8wMzM1ZHZyDQgDEgkvbS8wOGdweGZyDQgDEgkvbS8wMnlkcDMahwMSCjIwMjYtMTEtMDZqDAgDEggvbS8wNmdtcmoNCAMSCS9tLzA5d3dsamoRCAMSDS9nLzExYmM2eGxwcGRqDAgDEggvbS8wMl85bmoQCAMSDC9nLzFweHljdHhyZ2oMCAMSCC9tLzAxaHlfagwIAxIIL20vMGwzcTJqDQgDEgkvbS8wMTc1NzVqDQgDEgkvbS8wMjhtcHJqDQgDEgkvbS8wMzBjcm1qDQgDEgkvbS8wM2R6NmhqDQgDEgkvbS8wMmJrazNqDQgDEgkvbS8wNDQyeWhqDQgDEgkvbS8wMmJmZjlqDQgDEgkvbS8wMW00dF9qDQgDEgkvbS8wMWh5OWRqDQgDEgkvbS8wMWh5ODRqDQgDEgkvbS8wMXpwa3BqEAgDEgwvZy8xcHh5eXp4M3JqDQgDEgkvbS8wMzN5aGtqEQgDEg0vZy8xMWI2X2szdjY5ag0IAxIJL20vMDMzNWR2ag0IAxIJL20vMDhncHhmag0IAxIJL20vMDJ5ZHAzcgcIARIDR1JVQAFIAXABggELCP___________wGYAQHaAQoKCCoECAMQDkgB\",\n    \"captured_at\": \"2026-10-17\",\n    \"source\": \"Google Flights Deals public UI\",\n    \"query\": \"Viagens para o Brasil de 3 a 14 dias em qualquer data disponível\"\n  },\n  \"internacionais\": {\n    \"tfs\": \"CBwQBhqeAhIKMjAyNi0xMS0wMmoNCAMSCS9tLzAyMnBmbXINCAMSCS9tLzAxbHk1bXIMCAMSCC9tLzBkbHF2cgwIAxIIL20vMDlqcDNyDAgDEggvbS8wbHBmaHINCAMSCS9tLzAxZHp5Y3IMCAMSCC9tLzBmMnYwcg0IAxIJL20vMDJfMjg2cgwIAxIIL20vMHBseTByDAgDEggvbS8wNGxsYnIMCAMSCC9tLzA1Nl95cgwIAxIIL20vMDVxdGpyDAgDEggvbS8wNmM2MnIMCAMSCC9tLzA0anBscg0IAxIJL20vMDFxOThtcg0IAxIJL20vMDVzYzdncgwIAxIIL20vMGZyX2JyDQgDEgkvbS8wMzc1cDlyDQgDEgkvbS8wMm10d3QangISCjIwMjYtMTEtMDZqDQgDEgkvbS8wMWx5NW1qDAgDEggvbS8wZGxxdmoMCAMSCC9tLzA5anAzagwIAxIIL20vMGxwZmhqDQgDEgkvbS8wMWR6eWNqDAgDEggvbS8wZjJ2MGoNCAMSCS9tLzAyXzI4NmoMCAMSCC9tLzBwbHkwagwIAxIIL20vMDRsbGJqDAgDEggvbS8wNTZfeWoMCAMSCC9tLzA1cXRqagwIAxIIL20vMDZjNjJqDAgDEggvbS8wNGpwbGoNCAMSCS9tLzAxcTk4bWoNCAMSCS9tLzA1c2M3Z2oMCAMSCC9tLzBmcl9iag0IAxIJL20vMDM3NXA5ag0IAxIJL20vMDJtdHd0cg0IAxIJL20vMDIycGZtQAFIAXABggELCP___________wGYAQHaAQoKCCoECAMQDkgB\",\n    \"captured_at\": \"2026-10-17\",\n    \"source\": \"Google Flights Deals public UI\",\n    \"query\": \"Viagens internacionais para fora do Brasil de 3 a 14 dias em qualquer data disponível\"\n  }\n}\n});\n\nreturn (function execute({ nodes }, { queries, settings }) {\n  const configuration = nodes.configuration.first().json;\n  return settings.categories.flatMap((category) =>\n    settings.origins.map((origin) => ({\n      json: {\n        ...configuration,\n        category,\n        origin,\n        searchedAt: configuration.searchedAt,\n        today: configuration.today,\n        url: queries.makeQuery(category, origin, configuration),\n      },\n    })),\n  );\n})({ input: $input, now: $now, nodes: { configuration: $(\"Interpretar pedido\") } }, { queries: queries, settings: settings });\n"
+      }
+    },
+    {
+      "id": "aero-7",
+      "name": "Buscar ofertas",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1140,
+        80
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "value": "AeroScoutFlightQuery",
+          "mode": "id"
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      }
+    },
+    {
+      "id": "aero-8",
+      "name": "Montar listas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        80
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/formatMessages. Edit the source, then run npm run build.\n\nconst text = (function createTextHelpers() {\n  function normalize(value) {\n    return String(value ?? \"\")\n      .normalize(\"NFKC\")\n      .replace(/\\s+/g, \" \")\n      .trim();\n  }\n\n  function escapeHtml(value) {\n    return String(value)\n      .replace(/&/g, \"&amp;\")\n      .replace(/</g, \"&lt;\")\n      .replace(/>/g, \"&gt;\")\n      .replace(/\"/g, \"&quot;\");\n  }\n\n  return { normalize, escapeHtml };\n})({\n\n});\n\nconst settings = (function createSettings() {\n  return {\n    categories: [\"nacionais\", \"internacionais\"],\n    origins: [\"GRU\", \"CGH\"],\n    timezone: \"America/Sao_Paulo\",\n    currency: \"BRL\",\n    horizonMonths: 6,\n    minimumTripDays: 3,\n    maximumTripDays: 14,\n    offerLimit: 10,\n    maximumAttempts: 3,\n    retryDelaySeconds: 3,\n    requestTimeoutMs: 60_000,\n    executionTimeoutSeconds: 1_200,\n    userAgent:\n      \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \" +\n      \"(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\",\n    acceptLanguage: \"pt-BR,pt;q=0.9\",\n    telegram: {\n      messageBudget: 3_800,\n      partLabelReserve: 40,\n      warningLimit: 6,\n      warningLength: 240,\n    },\n  };\n})({\n\n});\n\nconst messages = (function createTelegramMessages({ text, settings }) {\n  function reportHeader(report) {\n    const title = report.category === \"nacionais\" ? \"Voos nacionais\" : \"Voos internacionais\";\n    const searchedAt = new Date(report.searchedAt).toLocaleString(\"pt-BR\", {\n      timeZone: settings.timezone,\n    });\n    const horizon = report.mode === \"command\"\n      ? \"Período solicitado: \" + report.startDate.split(\"-\").reverse().join(\"/\") +\n        \" a \" + report.endDate.split(\"-\").reverse().join(\"/\") +\n        \". Origens: \" + settings.origins.join(\" e \") + \".\"\n      : report.horizonMonths\n      ? \"Próximos \" + report.horizonMonths + \" meses (janela confirmada na fonte).\"\n      : \"Horizonte não confirmado: consulta falhou.\";\n    const statusMessages = {\n      failed: \"Falha na pesquisa.\",\n      partial: \"Resultado parcial: parte da pesquisa não pôde ser concluída.\",\n      complete: \"Pesquisa concluída na cobertura disponível.\",\n    };\n    const status = statusMessages[report.status] || statusMessages.complete;\n    return [\n      \"<b>\" + title + \"</b>\",\n      searchedAt + \" — São Paulo\",\n      \"Maiores descontos percentuais encontrados\",\n      horizon,\n      report.mode === \"command\"\n        ? \"1 adulto • econômica • ida e volta • BRL • 1–\" + report.maximumTripDays + \" dias\"\n        : \"1 adulto • econômica • ida e volta • BRL • 3–14 dias\",\n      status,\n      \"\",\n    ].join(\"\\n\");\n  }\n\n  function offerBlock(offer, index) {\n    const departure = offer.departure.split(\"-\").reverse().join(\"/\");\n    const returnDate = offer.returnDate.split(\"-\").reverse().join(\"/\");\n    const price = (offer.priceCents / 100).toLocaleString(\"pt-BR\", {\n      style: \"currency\",\n      currency: settings.currency,\n    });\n    return [\n      \"\",\n      `${index + 1}. <b>${text.escapeHtml(offer.destination)}</b> (${text.escapeHtml(offer.country)})`,\n      offer.origin + \" → \" + offer.destinationAirport,\n      \"Ida: \" + departure + \" | Volta: \" + returnDate,\n      price + \" por pessoa\",\n      offer.discountPercent.toLocaleString(\"pt-BR\") + \"% abaixo da média do Google\" +\n        (offer.referencePriceCents === null ? \"\" : \" (referência: \" +\n          (offer.referencePriceCents / 100).toLocaleString(\"pt-BR\", {\n            style: \"currency\", currency: settings.currency,\n          }) + \")\"),\n      '<a href=\"' + text.escapeHtml(offer.url) + '\">Consultar voo</a>',\n      \"\",\n    ].join(\"\\n\");\n  }\n\n  function reportFooter(warnings) {\n    const notes = warnings\n      .slice(0, settings.telegram.warningLimit)\n      .map((warning) => {\n        const shortenedWarning = text.normalize(warning).slice(0, settings.telegram.warningLength);\n        return text.escapeHtml(shortenedWarning);\n      })\n      .join(\"; \");\n    return (\n      \"\\n\" +\n      (notes ? \"Avisos: \" + notes + \"\\n\" : \"\") +\n      \"Apenas ofertas com desconto percentual informado pelo Google. \" +\n      \"Cobertura limitada aos destinos e cards retornados pelo Google. \" +\n      \"Preços e disponibilidade podem mudar.\"\n    );\n  }\n\n  function splitBlocks(blocks, budget) {\n    const chunks = [];\n    let current = \"\";\n    for (const block of blocks) {\n      if (block.length > budget) {\n        throw Error(\"Oferta excede o limite seguro de mensagem\");\n      }\n      if (current.length + block.length > budget) {\n        chunks.push(current);\n        current = \"\";\n      }\n      current += block;\n    }\n    if (current) {\n      chunks.push(current);\n    }\n    return chunks;\n  }\n\n  function formatReport(report) {\n    const header = reportHeader(report);\n    const blocks = report.offers.map(offerBlock);\n    if (!blocks.length) {\n      blocks.push(\n        report.status === \"complete\"\n          ? \"\\nNenhuma oferta válida com desconto percentual informado.\\n\"\n          : \"\\nNenhuma oferta disponível para apresentar; consulte os avisos.\\n\",\n      );\n    }\n    const footer = reportFooter(report.warnings);\n    // Count escaped HTML and URLs too, preserving the conservative existing Telegram limit.\n    const budget =\n      settings.telegram.messageBudget -\n      header.length -\n      footer.length -\n      settings.telegram.partLabelReserve;\n    const chunks = splitBlocks(blocks, budget);\n    return chunks.map((chunk, index) => ({\n      category: report.category,\n      status: report.status,\n      text: header + \"Parte \" + (index + 1) + \"/\" + chunks.length + \"\\n\" + chunk + footer,\n    }));\n  }\n\n  /** @param {import(\"../types.mjs\").SearchReport[]} reports */\n  function formatReports(reports) {\n    const orderedReports = [...reports].sort(\n      (first, second) =>\n        settings.categories.indexOf(first.category) - settings.categories.indexOf(second.category),\n    );\n    return orderedReports.flatMap(formatReport);\n  }\n\n  return { formatReports };\n})({\ntext: text,\nsettings: settings\n});\n\nconst ranking = (function createOfferRanking({ text, settings }) {\n  function compareOffers(first, second) {\n    return (\n      second.discountPercent - first.discountPercent ||\n      first.priceCents - second.priceCents ||\n      first.destination.localeCompare(second.destination, \"pt-BR\") ||\n      first.departure.localeCompare(second.departure) ||\n      first.origin.localeCompare(second.origin)\n    );\n  }\n\n  /** @param {import(\"../types.mjs\").Offer[]} offers */\n  function rank(offers, limit = settings.offerLimit) {\n    const sorted = offers\n      .filter((offer) => Number.isFinite(offer.discountPercent) &&\n        offer.discountPercent > 0 && offer.discountPercent < 100)\n      .sort(compareOffers);\n    const seenDestinations = new Set();\n    return sorted\n      .filter((offer) => {\n        const destinationKey =\n          text.normalize(offer.destination).toLocaleLowerCase(\"pt-BR\") + \"|\" + offer.country;\n        if (seenDestinations.has(destinationKey)) {\n          return false;\n        }\n        seenDestinations.add(destinationKey);\n        return true;\n      })\n      .slice(0, limit);\n  }\n\n  return { rank };\n})({\ntext: text,\nsettings: settings\n});\n\nconst reports = (function createSearchReports({ ranking }) {\n  function combinedStatus(queries) {\n    if (queries.every((query) => query.status === \"failed\")) {\n      return \"failed\";\n    }\n    if (queries.every((query) => query.status === \"complete\")) {\n      return \"complete\";\n    }\n    return \"partial\";\n  }\n\n  /**\n   * @param {import(\"../types.mjs\").SearchReport[]} queries Reports from one category.\n   * @returns {import(\"../types.mjs\").SearchReport}\n   */\n  function summarize(queries) {\n    const first = queries[0];\n    if (!first) {\n      throw Error(\"Consultas ausentes\");\n    }\n    const offers = ranking.rank(queries.flatMap((query) => query.offers || []));\n    const warnings = [...new Set(queries.flatMap((query) => query.warnings || []))];\n    return {\n      ...Object.fromEntries([\n        \"mode\", \"startDate\", \"endDate\", \"maximumTripDays\",\n      ].filter((key) => first[key] !== undefined).map((key) => [key, first[key]])),\n      category: first.category,\n      searchedAt: first.searchedAt,\n      today: first.today,\n      horizonMonths: queries.find((query) => query.horizonMonths)?.horizonMonths || null,\n      status: combinedStatus(queries),\n      offers,\n      warnings,\n    };\n  }\n\n  return { summarize };\n})({\nranking: ranking\n});\n\nreturn (function execute({ input, nodes }, { messages, reports, settings }) {\n  const configuration = nodes.configuration.first().json;\n  if (!configuration.dryRun && !/^-?\\d+$/.test(String(configuration.chatId))) {\n    throw Error(\"Configure o chat ID do Telegram\");\n  }\n  const queryReports = input.all().map((item) => item.json);\n  const categoryReports = settings.categories.map((category) => {\n    const queries = queryReports.filter((report) => report.category === category);\n    return reports.summarize(queries);\n  });\n  return messages.formatReports(categoryReports).map((message) => ({\n    json: {\n      ...message,\n      chatId: configuration.chatId,\n      dryRun: configuration.dryRun,\n    },\n  }));\n})({ input: $input, now: $now, nodes: { configuration: $(\"Interpretar pedido\") } }, { messages: messages, reports: reports, settings: settings });\n"
+      }
+    },
+    {
+      "id": "aero-9",
+      "name": "Enviar listas",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1620,
+        80
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "value": "AeroScoutTelegramDelivery",
+          "mode": "id"
+        },
+        "mode": "once",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Receber comandos": {
+      "main": [
+        [
+          {
+            "node": "Configuração",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Todos os dias às 22h": {
+      "main": [
+        [
+          {
+            "node": "Configuração",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Configuração": {
+      "main": [
+        [
+          {
+            "node": "Interpretar pedido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Interpretar pedido": {
+      "main": [
+        [
+          {
+            "node": "Pesquisar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pesquisar?": {
+      "main": [
+        [
+          {
+            "node": "Preparar consultas",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Enviar listas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar consultas": {
+      "main": [
+        [
+          {
+            "node": "Buscar ofertas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Buscar ofertas": {
+      "main": [
+        [
+          {
+            "node": "Montar listas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Montar listas": {
+      "main": [
+        [
+          {
+            "node": "Enviar listas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Sao_Paulo",
+    "executionTimeout": 1200,
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all"
+  },
+  "pinData": {},
+  "tags": []
+}

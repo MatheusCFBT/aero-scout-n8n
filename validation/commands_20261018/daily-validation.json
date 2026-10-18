@@ -1,0 +1,751 @@
+{
+  "commandInvalid": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 0,
+    "attempts": [],
+    "messages": [],
+    "reports": []
+  },
+  "preview": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 0,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/2\n\n1. <b>Cuiabá</b> (Brasil)\nCGH → CGB\nIda: 28/01/2027 | Volta: 31/01/2027\nR$ 833,00 por pessoa\n44% abaixo da média do Google (referência: R$ 1.485,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTI4agcIARIDQ0dIcg0IAhIJL20vMDMzeWhrGiQSCjIwMjctMDEtMzFqDQgCEgkvbS8wMzN5aGtyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pGaWdVUUFob0RRbEpNT0Rod3VJQUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Campo Grande</b> (Brasil)\nCGH → CGR\nIda: 10/11/2026 | Volta: 15/11/2026\nR$ 825,00 por pessoa\n39% abaixo da média do Google (referência: R$ 1.362,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTEwagcIARIDQ0dIcg0IAhIJL20vMDMzNWR2GiQSCjIwMjYtMTEtMTVqDQgCEgkvbS8wMzM1ZHZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lCaEFVUUFob0RRbEpNT0Rod2szOD0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Curitiba</b> (Brasil)\nGRU → CWB\nIda: 17/11/2026 | Volta: 24/11/2026\nR$ 449,00 por pessoa\n35% abaixo da média do Google (referência: R$ 688,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>João Pessoa</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.567,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAxIJL20vMDFoeTlkGiQSCjIwMjYtMTItMDRqDQgDEgkvbS8wMWh5OWRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lKdVFZUUFob0RRbEpNT0RodzhxSUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Recife</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.580,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMGhkenQaIxIKMjAyNi0xMi0wNGoMCAISCC9tLzBoZHp0cgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpSnVRWVFBaG9EUWxKTU9EaHc4cUlC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n6. <b>Aracaju</b> (Brasil)\nGRU → AJU\nIda: 03/12/2026 | Volta: 16/12/2026\nR$ 1.199,00 por pessoa\n29% abaixo da média do Google (referência: R$ 1.699,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAzagcIARIDR1JVcg0IAhIJL20vMDFoeTg0GiQSCjIwMjYtMTItMTZqDQgCEgkvbS8wMWh5ODRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pjcUFjUUFob0RRbEpNT0RodytMZ0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "",
+        "dryRun": true
+      },
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 2/2\n\n7. <b>Foz do Iguaçu</b> (Brasil)\nCGH → IGU\nIda: 13/12/2026 | Volta: 25/12/2026\nR$ 943,00 por pessoa\n28% abaixo da média do Google (referência: R$ 1.306,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTEzagcIARIDQ0dIcg0IAhIJL20vMDQ0MnloGiQSCjIwMjYtMTItMjVqDQgCEgkvbS8wNDQyeWhyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUSWFDd2pZNEFVUUFob0RRbEpNT0Rod3VaRUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Natal</b> (Brasil)\nGRU → NAT\nIda: 26/02/2027 | Volta: 01/03/2027\nR$ 1.064,00 por pessoa\n27% abaixo da média do Google (referência: R$ 1.454,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTI2agcIARIDR1JVcg0IAhIJL20vMDMwY3JtGiQSCjIwMjctMDMtMDFqDQgCEgkvbS8wMzBjcm1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2lOdndZUUFob0RRbEpNT0Rod2k2UUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Goiânia</b> (Brasil)\nCGH → GYN\nIda: 07/11/2026 | Volta: 10/11/2026\nR$ 729,00 por pessoa\n26% abaixo da média do Google (referência: R$ 981,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTExLTA3agcIARIDQ0dIchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTExLTEwahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRNYUN3aUV1UVFRQWhvRFFsSk1PRGh3ckhBPQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Fortaleza</b> (Brasil)\nCGH → FOR\nIda: 30/01/2027 | Volta: 13/02/2027\nR$ 1.188,00 por pessoa\n26% abaixo da média do Google (referência: R$ 1.615,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAxLTMwagcIARIDQ0dIcgwIAhIIL20vMDJfOW4aIxIKMjAyNy0wMi0xM2oMCAISCC9tLzAyXzlucgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dpR29BY1FBaG9EUWxKTU9EaHduYmNC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "",
+        "dryRun": true
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "",
+        "dryRun": true
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "",
+        "dryRun": true
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 8,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 7,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  },
+  "send": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/2\n\n1. <b>Cuiabá</b> (Brasil)\nCGH → CGB\nIda: 28/01/2027 | Volta: 31/01/2027\nR$ 833,00 por pessoa\n44% abaixo da média do Google (referência: R$ 1.485,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTI4agcIARIDQ0dIcg0IAhIJL20vMDMzeWhrGiQSCjIwMjctMDEtMzFqDQgCEgkvbS8wMzN5aGtyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pGaWdVUUFob0RRbEpNT0Rod3VJQUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Campo Grande</b> (Brasil)\nCGH → CGR\nIda: 10/11/2026 | Volta: 15/11/2026\nR$ 825,00 por pessoa\n39% abaixo da média do Google (referência: R$ 1.362,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTEwagcIARIDQ0dIcg0IAhIJL20vMDMzNWR2GiQSCjIwMjYtMTEtMTVqDQgCEgkvbS8wMzM1ZHZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lCaEFVUUFob0RRbEpNT0Rod2szOD0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Curitiba</b> (Brasil)\nGRU → CWB\nIda: 17/11/2026 | Volta: 24/11/2026\nR$ 449,00 por pessoa\n35% abaixo da média do Google (referência: R$ 688,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>João Pessoa</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.567,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAxIJL20vMDFoeTlkGiQSCjIwMjYtMTItMDRqDQgDEgkvbS8wMWh5OWRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lKdVFZUUFob0RRbEpNT0RodzhxSUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Recife</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.580,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMGhkenQaIxIKMjAyNi0xMi0wNGoMCAISCC9tLzBoZHp0cgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpSnVRWVFBaG9EUWxKTU9EaHc4cUlC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n6. <b>Aracaju</b> (Brasil)\nGRU → AJU\nIda: 03/12/2026 | Volta: 16/12/2026\nR$ 1.199,00 por pessoa\n29% abaixo da média do Google (referência: R$ 1.699,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAzagcIARIDR1JVcg0IAhIJL20vMDFoeTg0GiQSCjIwMjYtMTItMTZqDQgCEgkvbS8wMWh5ODRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pjcUFjUUFob0RRbEpNT0RodytMZ0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 2/2\n\n7. <b>Foz do Iguaçu</b> (Brasil)\nCGH → IGU\nIda: 13/12/2026 | Volta: 25/12/2026\nR$ 943,00 por pessoa\n28% abaixo da média do Google (referência: R$ 1.306,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTEzagcIARIDQ0dIcg0IAhIJL20vMDQ0MnloGiQSCjIwMjYtMTItMjVqDQgCEgkvbS8wNDQyeWhyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUSWFDd2pZNEFVUUFob0RRbEpNT0Rod3VaRUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Natal</b> (Brasil)\nGRU → NAT\nIda: 26/02/2027 | Volta: 01/03/2027\nR$ 1.064,00 por pessoa\n27% abaixo da média do Google (referência: R$ 1.454,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTI2agcIARIDR1JVcg0IAhIJL20vMDMwY3JtGiQSCjIwMjctMDMtMDFqDQgCEgkvbS8wMzBjcm1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2lOdndZUUFob0RRbEpNT0Rod2k2UUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Goiânia</b> (Brasil)\nCGH → GYN\nIda: 07/11/2026 | Volta: 10/11/2026\nR$ 729,00 por pessoa\n26% abaixo da média do Google (referência: R$ 981,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTExLTA3agcIARIDQ0dIchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTExLTEwahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRNYUN3aUV1UVFRQWhvRFFsSk1PRGh3ckhBPQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Fortaleza</b> (Brasil)\nCGH → FOR\nIda: 30/01/2027 | Volta: 13/02/2027\nR$ 1.188,00 por pessoa\n26% abaixo da média do Google (referência: R$ 1.615,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAxLTMwagcIARIDQ0dIcgwIAhIIL20vMDJfOW4aIxIKMjAyNy0wMi0xM2oMCAISCC9tLzAyXzlucgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dpR29BY1FBaG9EUWxKTU9EaHduYmNC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 8,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 7,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  },
+  "empty": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 2,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/1\n\nNenhuma oferta válida com desconto percentual informado.\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "complete",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/1\n\nNenhuma oferta válida com desconto percentual informado.\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 0,
+        "warningCount": 0
+      }
+    ]
+  },
+  "invalid": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "partial",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cuiabá</b> (Brasil)\nCGH → CGB\nIda: 28/01/2027 | Volta: 31/01/2027\nR$ 833,00 por pessoa\n44% abaixo da média do Google (referência: R$ 1.485,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTI4agcIARIDQ0dIcg0IAhIJL20vMDMzeWhrGiQSCjIwMjctMDEtMzFqDQgCEgkvbS8wMzN5aGtyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pGaWdVUUFob0RRbEpNT0Rod3VJQUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Campo Grande</b> (Brasil)\nCGH → CGR\nIda: 10/11/2026 | Volta: 15/11/2026\nR$ 825,00 por pessoa\n39% abaixo da média do Google (referência: R$ 1.362,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTEwagcIARIDQ0dIcg0IAhIJL20vMDMzNWR2GiQSCjIwMjYtMTEtMTVqDQgCEgkvbS8wMzM1ZHZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lCaEFVUUFob0RRbEpNT0Rod2szOD0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>João Pessoa</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.567,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAxIJL20vMDFoeTlkGiQSCjIwMjYtMTItMDRqDQgDEgkvbS8wMWh5OWRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lKdVFZUUFob0RRbEpNT0RodzhxSUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Recife</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.580,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMGhkenQaIxIKMjAyNi0xMi0wNGoMCAISCC9tLzBoZHp0cgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpSnVRWVFBaG9EUWxKTU9EaHc4cUlC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Aracaju</b> (Brasil)\nGRU → AJU\nIda: 03/12/2026 | Volta: 16/12/2026\nR$ 1.199,00 por pessoa\n29% abaixo da média do Google (referência: R$ 1.699,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAzagcIARIDR1JVcg0IAhIJL20vMDFoeTg0GiQSCjIwMjYtMTItMTZqDQgCEgkvbS8wMWh5ODRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pjcUFjUUFob0RRbEpNT0RodytMZ0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: GRU: País do destino não reconhecido\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "nacionais",
+        "status": "partial",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Foz do Iguaçu</b> (Brasil)\nCGH → IGU\nIda: 13/12/2026 | Volta: 25/12/2026\nR$ 943,00 por pessoa\n28% abaixo da média do Google (referência: R$ 1.306,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTEzagcIARIDQ0dIcg0IAhIJL20vMDQ0MnloGiQSCjIwMjYtMTItMjVqDQgCEgkvbS8wNDQyeWhyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUSWFDd2pZNEFVUUFob0RRbEpNT0Rod3VaRUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Natal</b> (Brasil)\nGRU → NAT\nIda: 26/02/2027 | Volta: 01/03/2027\nR$ 1.064,00 por pessoa\n27% abaixo da média do Google (referência: R$ 1.454,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTI2agcIARIDR1JVcg0IAhIJL20vMDMwY3JtGiQSCjIwMjctMDMtMDFqDQgCEgkvbS8wMzBjcm1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2lOdndZUUFob0RRbEpNT0Rod2k2UUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Goiânia</b> (Brasil)\nCGH → GYN\nIda: 07/11/2026 | Volta: 10/11/2026\nR$ 729,00 por pessoa\n26% abaixo da média do Google (referência: R$ 981,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTExLTA3agcIARIDQ0dIchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTExLTEwahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRNYUN3aUV1UVFRQWhvRFFsSk1PRGh3ckhBPQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Fortaleza</b> (Brasil)\nCGH → FOR\nIda: 30/01/2027 | Volta: 13/02/2027\nR$ 1.188,00 por pessoa\n26% abaixo da média do Google (referência: R$ 1.615,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAxLTMwagcIARIDQ0dIcgwIAhIIL20vMDJfOW4aIxIKMjAyNy0wMi0xM2oMCAISCC9tLzAyXzlucgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dpR29BY1FBaG9EUWxKTU9EaHduYmNC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Belém</b> (Brasil)\nCGH → BEL\nIda: 01/12/2026 | Volta: 15/12/2026\nR$ 1.745,00 por pessoa\n26% abaixo da média do Google (referência: R$ 2.356,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhonEgoyMDI2LTEyLTAxagcIARIDQ0dIchAIAxIML2cvMXB4eXl6eDNyGicSCjIwMjYtMTItMTVqEAgDEgwvZy8xcHh5eXp4M3JyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lHMHdvUUFob0RRbEpNT0Rod2pvMEM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: GRU: País do destino não reconhecido\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "partial",
+        "offerCount": 7,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 7,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  },
+  "partial": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 3,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "failed",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nHorizonte não confirmado: consulta falhou.\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nFalha na pesquisa.\nParte 1/1\n\nNenhuma oferta disponível para apresentar; consulte os avisos.\n\nAvisos: Falha HTTP na consulta GRU; Falha HTTP na consulta CGH\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  },
+  "failed": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 2,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "failed",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nHorizonte não confirmado: consulta falhou.\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nFalha na pesquisa.\nParte 1/1\n\nNenhuma oferta disponível para apresentar; consulte os avisos.\n\nAvisos: Falha HTTP na consulta GRU; Falha HTTP na consulta CGH\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "failed",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nHorizonte não confirmado: consulta falhou.\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nFalha na pesquisa.\nParte 1/1\n\nNenhuma oferta disponível para apresentar; consulte os avisos.\n\nAvisos: Falha HTTP na consulta GRU; Falha HTTP na consulta CGH\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      }
+    ]
+  },
+  "recovered": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 3
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/2\n\n1. <b>Cuiabá</b> (Brasil)\nCGH → CGB\nIda: 28/01/2027 | Volta: 31/01/2027\nR$ 833,00 por pessoa\n44% abaixo da média do Google (referência: R$ 1.485,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTI4agcIARIDQ0dIcg0IAhIJL20vMDMzeWhrGiQSCjIwMjctMDEtMzFqDQgCEgkvbS8wMzN5aGtyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pGaWdVUUFob0RRbEpNT0Rod3VJQUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Campo Grande</b> (Brasil)\nCGH → CGR\nIda: 10/11/2026 | Volta: 15/11/2026\nR$ 825,00 por pessoa\n39% abaixo da média do Google (referência: R$ 1.362,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTEwagcIARIDQ0dIcg0IAhIJL20vMDMzNWR2GiQSCjIwMjYtMTEtMTVqDQgCEgkvbS8wMzM1ZHZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lCaEFVUUFob0RRbEpNT0Rod2szOD0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Curitiba</b> (Brasil)\nGRU → CWB\nIda: 17/11/2026 | Volta: 24/11/2026\nR$ 449,00 por pessoa\n35% abaixo da média do Google (referência: R$ 688,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>João Pessoa</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.567,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAxIJL20vMDFoeTlkGiQSCjIwMjYtMTItMDRqDQgDEgkvbS8wMWh5OWRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lKdVFZUUFob0RRbEpNT0RodzhxSUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Recife</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.580,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMGhkenQaIxIKMjAyNi0xMi0wNGoMCAISCC9tLzBoZHp0cgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpSnVRWVFBaG9EUWxKTU9EaHc4cUlC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n6. <b>Aracaju</b> (Brasil)\nGRU → AJU\nIda: 03/12/2026 | Volta: 16/12/2026\nR$ 1.199,00 por pessoa\n29% abaixo da média do Google (referência: R$ 1.699,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAzagcIARIDR1JVcg0IAhIJL20vMDFoeTg0GiQSCjIwMjYtMTItMTZqDQgCEgkvbS8wMWh5ODRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pjcUFjUUFob0RRbEpNT0RodytMZ0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 2/2\n\n7. <b>Foz do Iguaçu</b> (Brasil)\nCGH → IGU\nIda: 13/12/2026 | Volta: 25/12/2026\nR$ 943,00 por pessoa\n28% abaixo da média do Google (referência: R$ 1.306,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTEzagcIARIDQ0dIcg0IAhIJL20vMDQ0MnloGiQSCjIwMjYtMTItMjVqDQgCEgkvbS8wNDQyeWhyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUSWFDd2pZNEFVUUFob0RRbEpNT0Rod3VaRUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Natal</b> (Brasil)\nGRU → NAT\nIda: 26/02/2027 | Volta: 01/03/2027\nR$ 1.064,00 por pessoa\n27% abaixo da média do Google (referência: R$ 1.454,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTI2agcIARIDR1JVcg0IAhIJL20vMDMwY3JtGiQSCjIwMjctMDMtMDFqDQgCEgkvbS8wMzBjcm1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2lOdndZUUFob0RRbEpNT0Rod2k2UUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Goiânia</b> (Brasil)\nCGH → GYN\nIda: 07/11/2026 | Volta: 10/11/2026\nR$ 729,00 por pessoa\n26% abaixo da média do Google (referência: R$ 981,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTExLTA3agcIARIDQ0dIchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTExLTEwahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRNYUN3aUV1UVFRQWhvRFFsSk1PRGh3ckhBPQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Fortaleza</b> (Brasil)\nCGH → FOR\nIda: 30/01/2027 | Volta: 13/02/2027\nR$ 1.188,00 por pessoa\n26% abaixo da média do Google (referência: R$ 1.615,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAxLTMwagcIARIDQ0dIcgwIAhIIL20vMDJfOW4aIxIKMjAyNy0wMi0xM2oMCAISCC9tLzAyXzlucgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dpR29BY1FBaG9EUWxKTU9EaHduYmNC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 8,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 7,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  },
+  "timeout": {
+    "validated": true,
+    "failed": false,
+    "messageCount": 3,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 3
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 3
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "failed",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nHorizonte não confirmado: consulta falhou.\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nFalha na pesquisa.\nParte 1/1\n\nNenhuma oferta disponível para apresentar; consulte os avisos.\n\nAvisos: Falha HTTP na consulta GRU; Falha HTTP na consulta CGH\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "failed",
+        "offerCount": 0,
+        "warningCount": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  },
+  "deliveryFailure": {
+    "validated": true,
+    "failed": true,
+    "messageCount": 4,
+    "attempts": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "attempt": 1
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "attempt": 1
+      }
+    ],
+    "messages": [
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/2\n\n1. <b>Cuiabá</b> (Brasil)\nCGH → CGB\nIda: 28/01/2027 | Volta: 31/01/2027\nR$ 833,00 por pessoa\n44% abaixo da média do Google (referência: R$ 1.485,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTI4agcIARIDQ0dIcg0IAhIJL20vMDMzeWhrGiQSCjIwMjctMDEtMzFqDQgCEgkvbS8wMzN5aGtyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pGaWdVUUFob0RRbEpNT0Rod3VJQUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Campo Grande</b> (Brasil)\nCGH → CGR\nIda: 10/11/2026 | Volta: 15/11/2026\nR$ 825,00 por pessoa\n39% abaixo da média do Google (referência: R$ 1.362,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTEwagcIARIDQ0dIcg0IAhIJL20vMDMzNWR2GiQSCjIwMjYtMTEtMTVqDQgCEgkvbS8wMzM1ZHZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lCaEFVUUFob0RRbEpNT0Rod2szOD0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Curitiba</b> (Brasil)\nGRU → CWB\nIda: 17/11/2026 | Volta: 24/11/2026\nR$ 449,00 por pessoa\n35% abaixo da média do Google (referência: R$ 688,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>João Pessoa</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.567,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAxIJL20vMDFoeTlkGiQSCjIwMjYtMTItMDRqDQgDEgkvbS8wMWh5OWRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2lKdVFZUUFob0RRbEpNT0RodzhxSUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Recife</b> (Brasil)\nGRU → REC\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.057,00 por pessoa\n33% abaixo da média do Google (referência: R$ 1.580,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMGhkenQaIxIKMjAyNi0xMi0wNGoMCAISCC9tLzBoZHp0cgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpSnVRWVFBaG9EUWxKTU9EaHc4cUlC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n6. <b>Aracaju</b> (Brasil)\nGRU → AJU\nIda: 03/12/2026 | Volta: 16/12/2026\nR$ 1.199,00 por pessoa\n29% abaixo da média do Google (referência: R$ 1.699,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAzagcIARIDR1JVcg0IAhIJL20vMDFoeTg0GiQSCjIwMjYtMTItMTZqDQgCEgkvbS8wMWh5ODRyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pjcUFjUUFob0RRbEpNT0RodytMZ0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "nacionais",
+        "status": "complete",
+        "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 2/2\n\n7. <b>Foz do Iguaçu</b> (Brasil)\nCGH → IGU\nIda: 13/12/2026 | Volta: 25/12/2026\nR$ 943,00 por pessoa\n28% abaixo da média do Google (referência: R$ 1.306,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTEzagcIARIDQ0dIcg0IAhIJL20vMDQ0MnloGiQSCjIwMjYtMTItMjVqDQgCEgkvbS8wNDQyeWhyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUSWFDd2pZNEFVUUFob0RRbEpNT0Rod3VaRUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Natal</b> (Brasil)\nGRU → NAT\nIda: 26/02/2027 | Volta: 01/03/2027\nR$ 1.064,00 por pessoa\n27% abaixo da média do Google (referência: R$ 1.454,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTI2agcIARIDR1JVcg0IAhIJL20vMDMwY3JtGiQSCjIwMjctMDMtMDFqDQgCEgkvbS8wMzBjcm1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2lOdndZUUFob0RRbEpNT0Rod2k2UUI&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Goiânia</b> (Brasil)\nCGH → GYN\nIda: 07/11/2026 | Volta: 10/11/2026\nR$ 729,00 por pessoa\n26% abaixo da média do Google (referência: R$ 981,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTExLTA3agcIARIDQ0dIchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTExLTEwahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRNYUN3aUV1UVFRQWhvRFFsSk1PRGh3ckhBPQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Fortaleza</b> (Brasil)\nCGH → FOR\nIda: 30/01/2027 | Volta: 13/02/2027\nR$ 1.188,00 por pessoa\n26% abaixo da média do Google (referência: R$ 1.615,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAxLTMwagcIARIDQ0dIcgwIAhIIL20vMDJfOW4aIxIKMjAyNy0wMi0xM2oMCAISCC9tLzAyXzlucgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dpR29BY1FBaG9EUWxKTU9EaHduYmNC&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Cidade do Panamá</b> (Panamá)\nCGH → PTY\nIda: 13/03/2027 | Volta: 19/03/2027\nR$ 2.594,00 por pessoa\n33% abaixo da média do Google (referência: R$ 3.884,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI3LTAzLTEzagcIARIDQ0dIcgwIAxIIL20vMGZyX2IaIxIKMjAyNy0wMy0xOWoMCAMSCC9tLzBmcl9icgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEFhQ3dpbDZnOFFBaG9EUWxKTU9EaHdocEFE&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Madrid</b> (Espanha)\nCGH → MAD\nIda: 04/11/2026 | Volta: 16/11/2026\nR$ 3.875,00 por pessoa\n33% abaixo da média do Google (referência: R$ 5.755,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA0agcIARIDQ0dIcgwIAhIIL20vMDU2X3kaIxIKMjAyNi0xMS0xNmoMCAISCC9tLzA1Nl95cgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVEVhQ3dqdzBoY1FBaG9EUWxKTU9EaHd6TlVF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Roma</b> (Itália)\nCGH → FCO\nIda: 26/10/2026 | Volta: 08/11/2026\nR$ 4.268,00 por pessoa\n33% abaixo da média do Google (referência: R$ 6.402,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDZjNjIaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzA2YzYycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dqVGhSb1FBaG9EUWxKTU9EaHdsWklG&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nCGH → MDZ\nIda: 01/01/2027 | Volta: 13/01/2027\nR$ 2.390,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.363,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAxLTAxagcIARIDQ0dIcg0IAxIJL20vMDJtdHd0GiQSCjIwMjctMDEtMTNqDQgDEgkvbS8wMm10d3RyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2lHeXc0UUFob0RRbEpNT0Rod3p2QUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Montevidéu</b> (Uruguai)\nCGH → MVD\nIda: 30/11/2026 | Volta: 05/12/2026\nR$ 2.442,00 por pessoa\n29% abaixo da média do Google (referência: R$ 3.440,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTMwagcIARIDQ0dIcgwIAxIIL20vMDlqcDMaIxIKMjAyNi0xMi0wNWoMCAMSCC9tLzA5anAzcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFFhQ3dqbzh3NFFBaG9EUWxKTU9EaHcxUGdD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      },
+      {
+        "category": "internacionais",
+        "status": "partial",
+        "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMaiores descontos percentuais encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n6. <b>Punta Cana</b> (República Dominicana)\nCGH → PUJ\nIda: 29/11/2026 | Volta: 03/12/2026\nR$ 3.180,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.295,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTI5agcIARIDQ0dIcg0IAxIJL20vMDVzYzdnGiQSCjIwMjYtMTItMDNqDQgDEgkvbS8wNXNjN2dyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklXa1kwYjJKWFRUZGFWMGxCU0ROWVRGRkNSeTB0TFMwdExTMHRMUzFqWlhGc05FRkJRVUZCUjNKVVp6UlZRemhZYVhOQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUVWFDd2lndEJNUUFob0RRbEpNT0Rod3Urb0Q&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n7. <b>Orlando</b> (Estados Unidos)\nCGH → MCO\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 3.370,00 por pessoa\n26% abaixo da média do Google (referência: R$ 4.577,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMHBseTAaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzBwbHkwcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dpV3lCUVFBaG9EUWxKTU9EaHcxb2NF&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n25% abaixo da média do Google (referência: R$ 1.618,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n23% abaixo da média do Google (referência: R$ 1.569,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Paris</b> (França)\nCGH → CDG\nIda: 26/10/2026 | Volta: 09/11/2026\nR$ 5.049,00 por pessoa\n23% abaixo da média do Google (referência: R$ 6.556,00)\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI2agcIARIDQ0dIcgwIAhIIL20vMDVxdGoaIxIKMjAyNi0xMS0wOWoMCAISCC9tLzA1cXRqcgcIARIDQ0dIQAFIAVIDQlJMenxDalJJV2tZMGIySlhUVGRhVjBsQlNETllURkZDUnkwdExTMHRMUzB0TFMxalpYRnNORUZCUVVGQlIzSlVaelJWUXpoWWFYTkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGNhQ3dpdDZCNFFBaG9EUWxKTU9EaHczb29H&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nApenas ofertas com desconto percentual informado pelo Google. Cobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+        "chatId": "123",
+        "dryRun": false
+      }
+    ],
+    "reports": [
+      {
+        "category": "nacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 8,
+        "warningCount": 0
+      },
+      {
+        "category": "nacionais",
+        "origin": "CGH",
+        "status": "complete",
+        "offerCount": 7,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "GRU",
+        "status": "complete",
+        "offerCount": 6,
+        "warningCount": 0
+      },
+      {
+        "category": "internacionais",
+        "origin": "CGH",
+        "status": "partial",
+        "offerCount": 9,
+        "warningCount": 2
+      }
+    ]
+  }
+}

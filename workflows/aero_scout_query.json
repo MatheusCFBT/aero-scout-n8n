@@ -1,0 +1,398 @@
+{
+  "id": "AeroScoutFlightQuery",
+  "name": "Aero Scout — consultar ofertas",
+  "nodes": [
+    {
+      "id": "query-1",
+      "name": "Receber consulta",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "inputSource": "passthrough"
+      }
+    },
+    {
+      "id": "query-2",
+      "name": "Iniciar tentativa",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/startAttempt. Edit the source, then run npm run build.\n\nreturn (function execute({ input }) {\n  return input.all().map((item, index) => ({\n    json: { ...item.json, attempt: (item.json.attempt || 0) + 1 },\n    pairedItem: { item: index },\n  }));\n})({ input: $input, now: $now, nodes: {  } }, {  });\n"
+      }
+    },
+    {
+      "id": "query-3",
+      "name": "Consultar Google Flights",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "pt-BR,pt;q=0.9"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000,
+          "response": {
+            "response": {
+              "responseFormat": "text",
+              "outputPropertyName": "data",
+              "fullResponse": true,
+              "neverError": true
+            }
+          },
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "query-4",
+      "name": "Ler resposta",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/readResponse. Edit the source, then run npm run build.\n\nreturn (function execute({ input, nodes }) {\n  return input.all().map((item, index) => {\n    const context = nodes.attempt.itemMatching(index).json;\n    const response = item.json;\n    let html = \"\";\n    if (typeof response.body === \"string\") {\n      html = response.body;\n    } else if (typeof response.data === \"string\") {\n      html = response.data;\n    }\n    return {\n      json: {\n        ...context,\n        statusCode: response.statusCode || 0,\n        error: response.error ? \"Falha HTTP\" : null,\n        data: html,\n      },\n      pairedItem: { item: index },\n    };\n  });\n})({ input: $input, now: $now, nodes: { attempt: $(\"Iniciar tentativa\") } }, {  });\n"
+      }
+    },
+    {
+      "id": "query-5",
+      "name": "Repetir consulta?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "retry",
+              "leftValue": "={{ $json.attempt < 3 && ($json.error !== null || $json.statusCode === 429 || $json.statusCode >= 500) }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "query-6",
+      "name": "Aguardar nova tentativa",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        720,
+        -200
+      ],
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "query-7",
+      "name": "Extrair página",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1200,
+        0
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "data",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "cards",
+              "cssSelector": "[data-deal-card-index]",
+              "returnValue": "html",
+              "returnArray": true
+            },
+            {
+              "key": "headings",
+              "cssSelector": "h2",
+              "returnArray": true
+            },
+            {
+              "key": "bodyText",
+              "cssSelector": "body",
+              "skipSelectors": "script,style"
+            },
+            {
+              "key": "tripType",
+              "cssSelector": "[aria-label$=\"Tipo de passagem\"]"
+            },
+            {
+              "key": "cabin",
+              "cssSelector": "[aria-label$=\"Classe do assento\"]"
+            },
+            {
+              "key": "passengers",
+              "cssSelector": "[aria-label=\"1 passageiro\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            },
+            {
+              "key": "currency",
+              "cssSelector": "[aria-label=\"Moeda BRL\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            },
+            {
+              "key": "originLabel",
+              "cssSelector": "input[role=\"combobox\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      }
+    },
+    {
+      "id": "query-8",
+      "name": "Separar cards",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/splitCards. Edit the source, then run npm run build.\n\nconst text = (function createTextHelpers() {\n  function normalize(value) {\n    return String(value ?? \"\")\n      .normalize(\"NFKC\")\n      .replace(/\\s+/g, \" \")\n      .trim();\n  }\n\n  function escapeHtml(value) {\n    return String(value)\n      .replace(/&/g, \"&amp;\")\n      .replace(/</g, \"&lt;\")\n      .replace(/>/g, \"&gt;\")\n      .replace(/\"/g, \"&quot;\");\n  }\n\n  return { normalize, escapeHtml };\n})({\n\n});\n\nconst settings = (function createSettings() {\n  return {\n    categories: [\"nacionais\", \"internacionais\"],\n    origins: [\"GRU\", \"CGH\"],\n    timezone: \"America/Sao_Paulo\",\n    currency: \"BRL\",\n    horizonMonths: 6,\n    minimumTripDays: 3,\n    maximumTripDays: 14,\n    offerLimit: 10,\n    maximumAttempts: 3,\n    retryDelaySeconds: 3,\n    requestTimeoutMs: 60_000,\n    executionTimeoutSeconds: 1_200,\n    userAgent:\n      \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \" +\n      \"(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\",\n    acceptLanguage: \"pt-BR,pt;q=0.9\",\n    telegram: {\n      messageBudget: 3_800,\n      partLabelReserve: 40,\n      warningLimit: 6,\n      warningLength: 240,\n    },\n  };\n})({\n\n});\n\nconst pageInspector = (function createPageInspector({ text, settings }) {\n  function failedPage(context, message) {\n    return { ...context, status: \"failed\", warnings: [message], cards: [], horizonMonths: null };\n  }\n\n  function hasExpectedCriteria(raw, context) {\n    return (\n      text.normalize(raw.tripType).includes(\"Ida e volta\") &&\n      text.normalize(raw.cabin).includes(\"Econômica\") &&\n      /^1 passageiro$/.test(text.normalize(raw.passengers)) &&\n      text.normalize(raw.currency).includes(settings.currency) &&\n      text.normalize(raw.originLabel).includes(context.origin)\n    );\n  }\n\n  /** Validate the search page before treating missing cards as a legitimate empty result. */\n  function inspectPage(raw, context) {\n    const headings = text.normalize(\n      Array.isArray(raw.headings) ? raw.headings.join(\" \") : raw.headings,\n    );\n    const body = text.normalize(raw.bodyText);\n    const cards = Array.isArray(raw.cards) ? raw.cards : [];\n\n    if (context.error || context.statusCode < 200 || context.statusCode >= 300) {\n      return failedPage(context, \"Falha HTTP na consulta \" + context.origin);\n    }\n    const sourceUnavailable =\n      /captcha|tráfego incomum|unusual traffic|algo deu errado|navegador não.*suportado/i;\n    if (sourceUnavailable.test(body)) {\n      return failedPage(context, \"Fonte bloqueada ou indisponível\");\n    }\n\n    const horizon = headings.match(/próximos\\s+(\\d+)\\s+meses/i);\n    if (context.mode === \"command\") {\n      const months = [\"jan\", \"fev\", \"mar\", \"abr\", \"mai\", \"jun\", \"jul\", \"ago\", \"set\", \"out\", \"nov\", \"dez\"];\n      function label(iso) {\n        const [, month, day] = iso.split(\"-\");\n        return Number(day) + \"de\" + months[Number(month) - 1];\n      }\n      // Native HTML extraction may join wrapped words; compare compact source headings.\n      const compact = headings.toLowerCase().replace(/\\s/g, \"\").replace(/\\./g, \"\");\n      const duration = context.maximumTripDays === 1\n        ? /viagemde1dia/\n        : new RegExp(\"viagemde1[-–]\" + context.maximumTripDays + \"dia\");\n      const range = context.startDate === context.departureEndDate\n        ? \"comidaem\" + label(context.startDate)\n        : \"comidaentre\" + label(context.startDate) + \"e\" + label(context.departureEndDate);\n      if (!duration.test(compact) || !compact.includes(range)) {\n        return failedPage(context,\n          \"Período solicitado não confirmado na fonte; consulta não suportada ou falhou\");\n      }\n    }\n    if (context.mode !== \"command\" && (\n      !horizon ||\n      Number(horizon[1]) !== settings.horizonMonths ||\n      !/3\\s*[-–]\\s*14\\s*dia/.test(headings)\n    )) {\n      return failedPage(context, \"Não foi possível confirmar datas flexíveis e duração na fonte\");\n    }\n    if (!hasExpectedCriteria(raw, context)) {\n      return failedPage(\n        context,\n        \"Critérios de origem, passageiros, cabine ou moeda não confirmados\",\n      );\n    }\n\n    const countMatch = headings.match(/\\b(\\d+)\\s+ofertas? saindo/);\n    if (!countMatch) {\n      return failedPage(context, \"Resumo de resultados ausente\");\n    }\n    const expectedCount = Number(countMatch[1]);\n    const confirmedEmpty =\n      expectedCount === 0 && /Nenhuma oferta encontrada para sua pesquisa/i.test(body);\n    if (!cards.length && !confirmedEmpty) {\n      return failedPage(context, \"HTML sem cards e sem confirmação de pesquisa vazia\");\n    }\n\n    const warnings = [];\n    if (expectedCount !== cards.length) {\n      warnings.push(\n        \"Cobertura parcial: \" + cards.length + \" de \" + expectedCount + \" cards recebidos\",\n      );\n    }\n    return {\n      ...context,\n      status: warnings.length ? \"partial\" : \"complete\",\n      warnings,\n      cards,\n      horizonMonths: context.mode === \"command\" ? null : Number(horizon[1]),\n    };\n  }\n\n  return { inspectPage };\n})({\ntext: text,\nsettings: settings\n});\n\nreturn (function execute({ input, nodes }, { pageInspector }) {\n  return input.all().flatMap((item, index) => {\n    const context = nodes.response.itemMatching(index).json;\n    const report = pageInspector.inspectPage(item.json, context);\n    const { cards, ...metadata } = report;\n    // Keep one sentinel item for empty/failed queries, otherwise HTML nodes would drop the report.\n    const cardsOrEmpty = cards.length ? cards : [\"\"];\n    return cardsOrEmpty.map((card) => ({\n      json: { data: card, meta: metadata, hasCard: !!card },\n      pairedItem: { item: index },\n    }));\n  });\n})({ input: $input, now: $now, nodes: { response: $(\"Ler resposta\") } }, { pageInspector: pageInspector });\n"
+      }
+    },
+    {
+      "id": "query-9",
+      "name": "Extrair ofertas",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1680,
+        0
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "data",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "destination",
+              "cssSelector": ".BkHwyb"
+            },
+            {
+              "key": "country",
+              "cssSelector": ".ViT5Db"
+            },
+            {
+              "key": "price",
+              "cssSelector": ".Z96dGf"
+            },
+            {
+              "key": "discountLabel",
+              "cssSelector": ".O1Ixyf"
+            },
+            {
+              "key": "referencePrice",
+              "cssSelector": ".PKGYsd span[aria-label]"
+            },
+            {
+              "key": "details",
+              "cssSelector": ".Rha8Ed .lT3Wff",
+              "returnArray": true
+            },
+            {
+              "key": "link",
+              "cssSelector": "a",
+              "returnValue": "attribute",
+              "attribute": "href"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      }
+    },
+    {
+      "id": "query-10",
+      "name": "Retornar ofertas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Generated from src/n8n/collectOffers. Edit the source, then run npm run build.\n\nconst text = (function createTextHelpers() {\n  function normalize(value) {\n    return String(value ?? \"\")\n      .normalize(\"NFKC\")\n      .replace(/\\s+/g, \" \")\n      .trim();\n  }\n\n  function escapeHtml(value) {\n    return String(value)\n      .replace(/&/g, \"&amp;\")\n      .replace(/</g, \"&lt;\")\n      .replace(/>/g, \"&gt;\")\n      .replace(/\"/g, \"&quot;\");\n  }\n\n  return { normalize, escapeHtml };\n})({\n\n});\n\nconst dates = (function createDateHelpers() {\n  const MILLISECONDS_PER_DAY = 86_400_000;\n\n  function day(isoDate) {\n    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(isoDate)) {\n      throw Error(\"Data inválida\");\n    }\n\n    const timestamp = Date.parse(isoDate + \"T00:00:00Z\");\n    const isValid =\n      Number.isFinite(timestamp) &&\n      new Date(timestamp).toISOString().slice(0, 10) === isoDate;\n\n    if (!isValid) {\n      throw Error(\"Data inválida\");\n    }\n    return timestamp;\n  }\n\n  function addMonths(isoDate, months) {\n    const date = new Date(day(isoDate));\n    const originalDay = date.getUTCDate();\n    date.setUTCDate(1);\n    date.setUTCMonth(date.getUTCMonth() + months);\n\n    const lastDayOfMonth = new Date(\n      Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, 0),\n    ).getUTCDate();\n    date.setUTCDate(Math.min(originalDay, lastDayOfMonth));\n    return date.toISOString().slice(0, 10);\n  }\n\n  function tripDuration(departure, returnDate) {\n    return (day(returnDate) - day(departure)) / MILLISECONDS_PER_DAY;\n  }\n\n  return { day, addMonths, tripDuration };\n})({\n\n});\n\nconst prices = (function createPriceHelpers({ text }) {\n  function priceCents(value) {\n    const normalizedPrice = text.normalize(value);\n    const match = normalizedPrice.match(\n      /^R\\$\\s*((?:\\d{1,3}(?:\\.\\d{3})+|\\d+))(?:,(\\d{2}))?$/,\n    );\n    if (!match) {\n      throw Error(\"Preço em BRL não reconhecido\");\n    }\n\n    const reais = Number(match[1].replace(/\\./g, \"\"));\n    const cents = Number(match[2] || 0);\n    const totalCents = reais * 100 + cents;\n    if (!Number.isSafeInteger(totalCents) || totalCents <= 0) {\n      throw Error(\"Preço inválido\");\n    }\n    return totalCents;\n  }\n\n  return { priceCents };\n})({\ntext: text\n});\n\nconst protocol = (function createFlightProtocol() {\n  const WIRE_TYPES = { INTEGER: 0, FIXED_64: 1, BYTES: 2, FIXED_32: 5 };\n  const VARINT_BASE = 128;\n  const VARINT_DATA_MASK = 127;\n  const VARINT_CONTINUATION = 128;\n  const MAX_VARINT_BYTES = 10;\n  // These are encoded protobuf tags (field number * 8 + wire type), not field numbers.\n  const TAGS = { FLIGHT_LEG: 26, DATE: 18, ORIGIN: 106, DESTINATION: 114 };\n\n  function fields(bytes) {\n    let offset = 0;\n    const result = [];\n\n    function readInteger() {\n      let value = 0;\n      let shift = 0;\n      for (let index = 0; index < MAX_VARINT_BYTES; index += 1) {\n        if (offset >= bytes.length) {\n          throw Error(\"Parâmetro truncado\");\n        }\n        const byte = bytes[offset++];\n        value += (byte & VARINT_DATA_MASK) * 2 ** shift;\n        if (!(byte & VARINT_CONTINUATION)) {\n          return value;\n        }\n        shift += 7;\n      }\n      throw Error(\"Parâmetro inválido\");\n    }\n\n    while (offset < bytes.length) {\n      const start = offset;\n      const key = readInteger();\n      const wireType = key % 8;\n      let data;\n\n      if (wireType === WIRE_TYPES.BYTES) {\n        const length = readInteger();\n        if (!Number.isSafeInteger(length) || offset + length > bytes.length) {\n          throw Error(\"Comprimento inválido\");\n        }\n        data = bytes.subarray(offset, offset + length);\n        offset += length;\n      } else if (wireType === WIRE_TYPES.INTEGER) {\n        readInteger();\n      } else if (wireType === WIRE_TYPES.FIXED_64) {\n        offset += 8;\n      } else if (wireType === WIRE_TYPES.FIXED_32) {\n        offset += 4;\n      } else {\n        throw Error(\"Formato de parâmetro desconhecido\");\n      }\n\n      if (offset > bytes.length) {\n        throw Error(\"Parâmetro truncado\");\n      }\n      result.push({ key, data, raw: bytes.subarray(start, offset) });\n    }\n    return result;\n  }\n\n  function encodeInteger(value) {\n    const bytes = [];\n    do {\n      const continuation = value >= VARINT_BASE ? VARINT_CONTINUATION : 0;\n      bytes.push((value % VARINT_BASE) | continuation);\n      value = Math.floor(value / VARINT_BASE);\n    } while (value);\n    return Buffer.from(bytes);\n  }\n\n  function field(tag, data) {\n    return Buffer.concat([encodeInteger(tag), encodeInteger(data.length), data]);\n  }\n\n  function airportLocation(origin) {\n    // The public URL represents an IATA airport as location type 1 and a three-byte code.\n    return Buffer.from([8, 1, 18, 3, ...Buffer.from(origin)]);\n  }\n\n  function integerField(tag, value) {\n    if (!Number.isSafeInteger(value) || value < 0) {\n      throw Error(\"Inteiro inválido\");\n    }\n    return Buffer.concat([encodeInteger(tag), encodeInteger(value)]);\n  }\n\n  return { fields, field, integerField, airportLocation, tags: TAGS };\n})({\n\n});\n\nconst flightDateParser = (function createFlightDateParser({ protocol, dates }) {\n  function readLegDate(leg) {\n    const dateFields = protocol.fields(leg.data).filter(({ key }) => key === protocol.tags.DATE);\n    if (dateFields.length !== 1) {\n      throw Error(\"Data ambígua\");\n    }\n    const isoDate = dateFields[0].data.toString(\"utf8\");\n    dates.day(isoDate);\n    return isoDate;\n  }\n\n  function flightDates(url) {\n    const encodedQuery = url.match(/[?&]tfs=([^&]+)/)?.[1];\n    if (!encodedQuery) {\n      throw Error(\"Link sem datas verificáveis\");\n    }\n    const queryBytes = Buffer.from(decodeURIComponent(encodedQuery), \"base64url\");\n    const legs = protocol.fields(queryBytes).filter(({ key }) => key === protocol.tags.FLIGHT_LEG);\n    if (legs.length !== 2) {\n      throw Error(\"Oferta não comprova ida e volta\");\n    }\n    return legs.map(readLegDate);\n  }\n\n  return { flightDates };\n})({\nprotocol: protocol,\ndates: dates\n});\n\nconst settings = (function createSettings() {\n  return {\n    categories: [\"nacionais\", \"internacionais\"],\n    origins: [\"GRU\", \"CGH\"],\n    timezone: \"America/Sao_Paulo\",\n    currency: \"BRL\",\n    horizonMonths: 6,\n    minimumTripDays: 3,\n    maximumTripDays: 14,\n    offerLimit: 10,\n    maximumAttempts: 3,\n    retryDelaySeconds: 3,\n    requestTimeoutMs: 60_000,\n    executionTimeoutSeconds: 1_200,\n    userAgent:\n      \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \" +\n      \"(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\",\n    acceptLanguage: \"pt-BR,pt;q=0.9\",\n    telegram: {\n      messageBudget: 3_800,\n      partLabelReserve: 40,\n      warningLimit: 6,\n      warningLength: 240,\n    },\n  };\n})({\n\n});\n\nconst offerParser = (function createOfferParser({ text, dates, prices, flightDateParser, countries, settings }) {\n  function readRoute(details) {\n    const routes = [...text.normalize(details).matchAll(/\\b([A-Z]{3})\\s*[–—-]\\s*([A-Z]{3})\\b/g)];\n    if (routes.length !== 1) {\n      throw Error(\"Rota ausente ou ambígua\");\n    }\n    const [, origin, destinationAirport] = routes[0];\n    return { origin, destinationAirport };\n  }\n\n  function readFlightUrl(link) {\n    let url = text.normalize(link);\n    if (url.startsWith(\"/\")) {\n      url = \"https://www.google.com\" + url;\n    }\n    if (!/^https:\\/\\/www\\.google\\.com(?:\\.br)?\\/travel\\/flights\\?[^\\s<>\"']+$/.test(url)) {\n      throw Error(\"Link de voo inválido\");\n    }\n    return url;\n  }\n\n  function readDiscount(raw, priceCents) {\n    const label = text.normalize(raw.discountLabel);\n    if (!label) {\n      return null;\n    }\n    const match = label.match(/^(\\d+(?:[.,]\\d+)?)%\\s*abaixo da média$/i);\n    const discountPercent = match ? Number(match[1].replace(\",\", \".\")) : NaN;\n    if (!Number.isFinite(discountPercent) || discountPercent <= 0 || discountPercent >= 100) {\n      throw Error(\"Percentual de desconto ausente ou inválido\");\n    }\n    const referencePriceCents = text.normalize(raw.referencePrice)\n      ? prices.priceCents(raw.referencePrice)\n      : null;\n    if (referencePriceCents !== null && referencePriceCents <= priceCents) {\n      throw Error(\"Preço de referência incompatível com o desconto\");\n    }\n    // Preserve Google's displayed percentage: its reference and current prices are rounded.\n    return { discountPercent, referencePriceCents };\n  }\n\n  function validateTripDates(departure, returnDate, context) {\n    const duration = dates.tripDuration(departure, returnDate);\n    if (context.mode === \"command\") {\n      if (duration < 1 || duration > context.maximumTripDays ||\n          departure < context.startDate || returnDate > context.endDate) {\n        throw Error(\"Datas fora da janela solicitada\");\n      }\n      return;\n    }\n    if (duration < settings.minimumTripDays || duration > settings.maximumTripDays) {\n      throw Error(\"Duração fora de 3–14 dias\");\n    }\n    const horizonEnd = dates.addMonths(context.today, context.horizonMonths);\n    const departureIsPast = dates.day(departure) < dates.day(context.today);\n    const returnIsOutsideHorizon = dates.day(returnDate) > dates.day(horizonEnd);\n    if (departureIsPast || returnIsOutsideHorizon) {\n      throw Error(\"Datas fora do horizonte confirmado\");\n    }\n  }\n\n  /**\n   * @param {object} raw Extracted fields from a single card.\n   * @param {import(\"../types.mjs\").SearchContext} context\n   * @returns {import(\"../types.mjs\").Offer | null} Null means a different category or origin.\n   */\n  function parseOffer(raw, context) {\n    const destination = text.normalize(raw.destination);\n    const country = text.normalize(raw.country);\n    if (!destination || destination.length > 180) {\n      throw Error(\"Destino ausente ou inválido\");\n    }\n    if (!countries.includes(country)) {\n      throw Error(\"País do destino não reconhecido\");\n    }\n\n    const category = country === \"Brasil\" ? \"nacionais\" : \"internacionais\";\n    if (category !== context.category) {\n      return null;\n    }\n    const { origin, destinationAirport } = readRoute(raw.details);\n    if (origin !== context.origin) {\n      return null;\n    }\n\n    const url = readFlightUrl(raw.link);\n    const [departure, returnDate] = flightDateParser.flightDates(url);\n    validateTripDates(departure, returnDate, context);\n    const priceCents = prices.priceCents(raw.price);\n    const discount = readDiscount(raw, priceCents);\n    if (!discount) {\n      return null;\n    }\n    return {\n      category,\n      destination,\n      country,\n      origin,\n      destinationAirport,\n      departure,\n      returnDate,\n      priceCents,\n      ...discount,\n      currency: settings.currency,\n      url,\n    };\n  }\n\n  return { parseOffer };\n})({\ntext: text,\ndates: dates,\nprices: prices,\nflightDateParser: flightDateParser,\nsettings: settings,\ncountries: [\n  \"Afeganistão\",\n  \"Albânia\",\n  \"Alemanha\",\n  \"Andorra\",\n  \"Angola\",\n  \"Anguila\",\n  \"Antártida\",\n  \"Antígua e Barbuda\",\n  \"Argentina\",\n  \"Argélia\",\n  \"Armênia\",\n  \"Aruba\",\n  \"Arábia Saudita\",\n  \"Austrália\",\n  \"Azerbaijão\",\n  \"Bahamas\",\n  \"Bangladesh\",\n  \"Barbados\",\n  \"Barein\",\n  \"Belize\",\n  \"Benin\",\n  \"Bermudas\",\n  \"Bielorrússia\",\n  \"Bolívia\",\n  \"Botsuana\",\n  \"Brasil\",\n  \"Brunei\",\n  \"Bulgária\",\n  \"Burquina Faso\",\n  \"Burundi\",\n  \"Butão\",\n  \"Bélgica\",\n  \"Bósnia e Herzegovina\",\n  \"Cabo Verde\",\n  \"Camarões\",\n  \"Camboja\",\n  \"Canadá\",\n  \"Catar\",\n  \"Cazaquistão\",\n  \"Chade\",\n  \"Chile\",\n  \"China\",\n  \"Chipre\",\n  \"Cidade do Vaticano\",\n  \"Colômbia\",\n  \"Comores\",\n  \"Congo - Kinshasa\",\n  \"Coreia do Norte\",\n  \"Coreia do Sul\",\n  \"Costa Rica\",\n  \"Costa do Marfim\",\n  \"Croácia\",\n  \"Cuba\",\n  \"Curaçao\",\n  \"Dinamarca\",\n  \"Djibuti\",\n  \"Dominica\",\n  \"Egito\",\n  \"El Salvador\",\n  \"Emirados Árabes Unidos\",\n  \"Equador\",\n  \"Eritreia\",\n  \"Eslováquia\",\n  \"Eslovênia\",\n  \"Espanha\",\n  \"Essuatíni\",\n  \"Estados Unidos\",\n  \"Estônia\",\n  \"Etiópia\",\n  \"Fiji\",\n  \"Filipinas\",\n  \"Finlândia\",\n  \"França\",\n  \"Gabão\",\n  \"Gana\",\n  \"Geórgia\",\n  \"Gibraltar\",\n  \"Granada\",\n  \"Groenlândia\",\n  \"Grécia\",\n  \"Guadalupe\",\n  \"Guam\",\n  \"Guatemala\",\n  \"Guernsey\",\n  \"Guiana\",\n  \"Guiana Francesa\",\n  \"Guiné\",\n  \"Guiné Equatorial\",\n  \"Guiné-Bissau\",\n  \"Gâmbia\",\n  \"Haiti\",\n  \"Honduras\",\n  \"Hong Kong, RAE da China\",\n  \"Hungria\",\n  \"Ilha Bouvet\",\n  \"Ilha Christmas\",\n  \"Ilha Norfolk\",\n  \"Ilha de Man\",\n  \"Ilhas Aland\",\n  \"Ilhas Cayman\",\n  \"Ilhas Cocos (Keeling)\",\n  \"Ilhas Cook\",\n  \"Ilhas Faroé\",\n  \"Ilhas Geórgia do Sul e Sandwich do Sul\",\n  \"Ilhas Heard e McDonald\",\n  \"Ilhas Malvinas\",\n  \"Ilhas Marianas do Norte\",\n  \"Ilhas Marshall\",\n  \"Ilhas Menores Distantes dos EUA\",\n  \"Ilhas Pitcairn\",\n  \"Ilhas Salomão\",\n  \"Ilhas Turcas e Caicos\",\n  \"Ilhas Virgens Americanas\",\n  \"Ilhas Virgens Britânicas\",\n  \"Indonésia\",\n  \"Iraque\",\n  \"Irlanda\",\n  \"Irã\",\n  \"Islândia\",\n  \"Israel\",\n  \"Itália\",\n  \"Iêmen\",\n  \"Jamaica\",\n  \"Japão\",\n  \"Jersey\",\n  \"Jordânia\",\n  \"Kuwait\",\n  \"Laos\",\n  \"Lesoto\",\n  \"Letônia\",\n  \"Libéria\",\n  \"Liechtenstein\",\n  \"Lituânia\",\n  \"Luxemburgo\",\n  \"Líbano\",\n  \"Líbia\",\n  \"Macau, RAE da China\",\n  \"Macedônia do Norte\",\n  \"Madagascar\",\n  \"Malaui\",\n  \"Maldivas\",\n  \"Mali\",\n  \"Malta\",\n  \"Malásia\",\n  \"Marrocos\",\n  \"Martinica\",\n  \"Mauritânia\",\n  \"Maurício\",\n  \"Mayotte\",\n  \"Mianmar (Birmânia)\",\n  \"Micronésia\",\n  \"Moldávia\",\n  \"Mongólia\",\n  \"Montenegro\",\n  \"Montserrat\",\n  \"Moçambique\",\n  \"México\",\n  \"Mônaco\",\n  \"Namíbia\",\n  \"Nauru\",\n  \"Nepal\",\n  \"Nicarágua\",\n  \"Nigéria\",\n  \"Niue\",\n  \"Noruega\",\n  \"Nova Caledônia\",\n  \"Nova Zelândia\",\n  \"Níger\",\n  \"Omã\",\n  \"Palau\",\n  \"Panamá\",\n  \"Papua-Nova Guiné\",\n  \"Paquistão\",\n  \"Paraguai\",\n  \"Países Baixos\",\n  \"Países Baixos Caribenhos\",\n  \"Peru\",\n  \"Polinésia Francesa\",\n  \"Polônia\",\n  \"Porto Rico\",\n  \"Portugal\",\n  \"Quirguistão\",\n  \"Quiribati\",\n  \"Quênia\",\n  \"Reino Unido\",\n  \"República Centro-Africana\",\n  \"República Dominicana\",\n  \"República do Congo\",\n  \"Reunião\",\n  \"Romênia\",\n  \"Ruanda\",\n  \"Rússia\",\n  \"Saara Ocidental\",\n  \"Samoa\",\n  \"Samoa Americana\",\n  \"San Marino\",\n  \"Santa Helena\",\n  \"Santa Lúcia\",\n  \"Seicheles\",\n  \"Senegal\",\n  \"Serra Leoa\",\n  \"Singapura\",\n  \"Sint Maarten\",\n  \"Somália\",\n  \"Sri Lanka\",\n  \"Sudão\",\n  \"Sudão do Sul\",\n  \"Suriname\",\n  \"Suécia\",\n  \"Suíça\",\n  \"Svalbard e Jan Mayen\",\n  \"São Bartolomeu\",\n  \"São Cristóvão e Névis\",\n  \"São Martinho\",\n  \"São Pedro e Miquelão\",\n  \"São Tomé e Príncipe\",\n  \"São Vicente e Granadinas\",\n  \"Sérvia\",\n  \"Síria\",\n  \"Tadjiquistão\",\n  \"Tailândia\",\n  \"Taiwan\",\n  \"Tanzânia\",\n  \"Tchéquia\",\n  \"Território Britânico do Oceano Índico\",\n  \"Territórios Franceses do Sul\",\n  \"Territórios palestinos\",\n  \"Timor-Leste\",\n  \"Togo\",\n  \"Tokelau\",\n  \"Tonga\",\n  \"Trinidad e Tobago\",\n  \"Tunísia\",\n  \"Turcomenistão\",\n  \"Turquia\",\n  \"Tuvalu\",\n  \"Ucrânia\",\n  \"Uganda\",\n  \"Uruguai\",\n  \"Uzbequistão\",\n  \"Vanuatu\",\n  \"Venezuela\",\n  \"Vietnã\",\n  \"Wallis e Futuna\",\n  \"Zimbábue\",\n  \"Zâmbia\",\n  \"África do Sul\",\n  \"Áustria\",\n  \"Índia\"\n]\n});\n\nreturn (function execute({ input, nodes }, { offerParser }) {\n  const reportsByOrigin = new Map();\n  for (const [index, item] of input.all().entries()) {\n    const { meta: metadata, hasCard } = nodes.cards.itemMatching(index).json;\n    let report = reportsByOrigin.get(metadata.origin);\n    if (!report) {\n      report = { ...metadata, offers: [], warnings: [...metadata.warnings] };\n      reportsByOrigin.set(metadata.origin, report);\n    }\n    if (!hasCard) {\n      continue;\n    }\n    try {\n      const offer = offerParser.parseOffer(item.json, metadata);\n      if (offer) {\n        report.offers.push(offer);\n      }\n    } catch (error) {\n      report.status = \"partial\";\n      report.warnings.push(metadata.origin + \": \" + error.message);\n    }\n  }\n  // A child execution handles one query; return useful data, not the original HTML payload.\n  return [...reportsByOrigin.values()].map((report) => ({\n    json: {\n      ...Object.fromEntries([\n        \"mode\", \"startDate\", \"endDate\", \"departureEndDate\",\n        \"minimumTripDays\", \"maximumTripDays\", \"requestId\",\n      ].filter((key) => report[key] !== undefined).map((key) => [key, report[key]])),\n      category: report.category,\n      origin: report.origin,\n      searchedAt: report.searchedAt,\n      today: report.today,\n      horizonMonths: report.horizonMonths,\n      status: report.status,\n      offers: report.offers,\n      warnings: report.warnings,\n      attempt: report.attempt,\n    },\n  }));\n})({ input: $input, now: $now, nodes: { cards: $(\"Separar cards\") } }, { offerParser: offerParser });\n"
+      }
+    }
+  ],
+  "connections": {
+    "Receber consulta": {
+      "main": [
+        [
+          {
+            "node": "Iniciar tentativa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iniciar tentativa": {
+      "main": [
+        [
+          {
+            "node": "Consultar Google Flights",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consultar Google Flights": {
+      "main": [
+        [
+          {
+            "node": "Ler resposta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ler resposta": {
+      "main": [
+        [
+          {
+            "node": "Repetir consulta?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Repetir consulta?": {
+      "main": [
+        [
+          {
+            "node": "Aguardar nova tentativa",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Extrair página",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aguardar nova tentativa": {
+      "main": [
+        [
+          {
+            "node": "Iniciar tentativa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair página": {
+      "main": [
+        [
+          {
+            "node": "Separar cards",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separar cards": {
+      "main": [
+        [
+          {
+            "node": "Extrair ofertas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair ofertas": {
+      "main": [
+        [
+          {
+            "node": "Retornar ofertas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Sao_Paulo",
+    "executionTimeout": 1200,
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all"
+  },
+  "pinData": {},
+  "tags": []
+}

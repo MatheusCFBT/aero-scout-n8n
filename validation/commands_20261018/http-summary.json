@@ -1,0 +1,30 @@
+[
+  {
+    "query": "internacionais_GRU",
+    "headings": [
+      "18 ofertas saindo de Aeroporto Internacional de São Paulo/Guarulhos–Governador André Franco Montoro para uma viagem de 1-6 dia com ida entre 14 de mai. e 19 de mai. "
+    ],
+    "cardCount": 18
+  },
+  {
+    "query": "nacionais_GRU",
+    "headings": [
+      "24 ofertas saindo de Aeroporto Internacional de São Paulo/Guarulhos–Governador André Franco Montoro para uma viagem de 1-6 dia com ida entre 14 de mai. e 19 de mai. "
+    ],
+    "cardCount": 24
+  },
+  {
+    "query": "nacionais_CGH",
+    "headings": [
+      "24 ofertas saindo de Aeroporto de São Paulo/Congonhas–Deputado Freitas Nobre para uma viagem de 1-6 dia com ida entre 14 de mai. e 19 de mai. "
+    ],
+    "cardCount": 24
+  },
+  {
+    "query": "internacionais_CGH",
+    "headings": [
+      "17 ofertas saindo de Aeroporto de São Paulo/Congonhas–Deputado Freitas Nobre para uma viagem de 1-6 dia com ida entre 14 de mai. e 19 de mai. "
+    ],
+    "cardCount": 17
+  }
+]

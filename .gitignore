@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.n8n/
+n8n_data/
+*.sqlite
+*.sqlite-*
+# Generated validation input and local dependencies
+validation_workflow.json
+node_modules/
+
+# Local workflow backups contain installation configuration
+.local_backups/
+
+# Multi-workflow validation artifacts
+validation_workflows.json
+validation_suite/

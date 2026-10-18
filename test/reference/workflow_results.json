@@ -1,0 +1,851 @@
+{
+  "preview": {
+    "lastNode": "Prévia sem envio",
+    "results": {
+      "Resumo nacionais": [
+        {
+          "category": "nacionais",
+          "searchedAt": "2026-10-17T14:00:00Z",
+          "today": "2026-10-17",
+          "horizonMonths": 6,
+          "status": "complete",
+          "offers": [
+            {
+              "category": "nacionais",
+              "destination": "Curitiba",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "CWB",
+              "departure": "2026-11-17",
+              "returnDate": "2026-11-24",
+              "priceCents": 44900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Belo Horizonte",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "CNF",
+              "departure": "2026-12-16",
+              "returnDate": "2026-12-21",
+              "priceCents": 53900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTE2agcIARIDR1JVcgwIAhIIL20vMGwzcTIaIxIKMjAyNi0xMi0yMWoMCAISCC9tLzBsM3EycgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dqdXBBTVFBaG9EUWxKTU9EaHdqRk09&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Florianópolis",
+              "country": "Brasil",
+              "origin": "CGH",
+              "destinationAirport": "FLN",
+              "departure": "2027-01-15",
+              "returnDate": "2027-01-18",
+              "priceCents": 58300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI3LTAxLTE1agcIARIDQ0dIchEIAhINL2cvMTFiYzZ4bHBwZBooEgoyMDI3LTAxLTE4ahEIAhINL2cvMTFiYzZ4bHBwZHIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRrYUN3aTF4d01RQWhvRFFsSk1PRGh3OVZrPQ&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Rio de Janeiro",
+              "country": "Brasil",
+              "origin": "CGH",
+              "destinationAirport": "GIG",
+              "departure": "2026-12-02",
+              "returnDate": "2026-12-16",
+              "priceCents": 60300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAyagcIARIDQ0dIcgwIAhIIL20vMDZnbXIaIxIKMjAyNi0xMi0xNmoMCAISCC9tLzA2Z21ycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaE5FWldGc1EyOXVjM1J5WVdsdWRITXdMVEV3R2dzSTFkWURFQUlhQTBKU1REZzRjUFpj&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Navegantes",
+              "country": "Brasil",
+              "origin": "CGH",
+              "destinationAirport": "NVT",
+              "departure": "2026-12-16",
+              "returnDate": "2026-12-19",
+              "priceCents": 63700,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTE2agcIARIDQ0dIcg0IAhIJL20vMDhncHhmGiQSCjIwMjYtMTItMTlqDQgCEgkvbS8wOGdweGZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURXhHZ3NJKy9BREVBSWFBMEpTVERnNGNJOWk&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Vitória",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "VIX",
+              "departure": "2026-11-17",
+              "returnDate": "2026-11-25",
+              "priceCents": 66800,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDJ5ZHAzGiQSCjIwMjYtMTEtMjVqDQgCEgkvbS8wMnlkcDNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUWWFDd2pNaVFRUUFob0RRbEpNT0Rody9XWT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Goiânia",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "GYN",
+              "departure": "2026-12-02",
+              "returnDate": "2026-12-08",
+              "priceCents": 72600,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTEyLTAyagcIARIDR1JVchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTEyLTA4ahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0dSVUABSAFSA0JSTHp8Q2pSSU0xWlBYMjFWTmxOelNtOUJRekptUW1kQ1J5MHRMUzB0TFdOblpIcDNNeTF1TWtGQlFVRkJSM0pVWnpSUlFXVXpSMUZCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRjYUN3aVZ0d1FRQWhvRFFsSk1PRGh3L1c4PQ&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Cuiabá",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "CGB",
+              "departure": "2026-10-27",
+              "returnDate": "2026-11-08",
+              "priceCents": 78200,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEwLTI3agcIARIDR1JVcg0IAhIJL20vMDMzeWhrGiQSCjIwMjYtMTEtMDhqDQgCEgkvbS8wMzN5aGtyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURXlHZ3NJditJRUVBSWFBMEpTVERnNGNNUjQ&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Brasília",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "BSB",
+              "departure": "2026-11-14",
+              "returnDate": "2026-11-17",
+              "priceCents": 79000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTE0agcIARIDR1JVcgwIAhIIL20vMDFoeV8aIxIKMjAyNi0xMS0xN2oMCAISCC9tLzAxaHlfcgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaE5FWldGc1EyOXVjM1J5WVdsdWRITXdMVEV6R2dzSSt1Z0VFQUlhQTBKU1REZzRjT2Q1&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Porto Alegre",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "POA",
+              "departure": "2026-12-16",
+              "returnDate": "2026-12-22",
+              "priceCents": 82300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTE2agcIARIDR1JVcg0IAhIJL20vMDE3NTc1GiQSCjIwMjYtMTItMjJqDQgCEgkvbS8wMTc1NzVyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURTBHZ3NJc0lJRkVBSWFBMEpTVERnNGNPbCs&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "Resumo internacionais": [
+        {
+          "category": "internacionais",
+          "searchedAt": "2026-10-17T14:00:00Z",
+          "today": "2026-10-17",
+          "horizonMonths": 6,
+          "status": "partial",
+          "offers": [
+            {
+              "category": "internacionais",
+              "destination": "Santiago",
+              "country": "Chile",
+              "origin": "GRU",
+              "destinationAirport": "SCL",
+              "departure": "2026-11-05",
+              "returnDate": "2026-11-08",
+              "priceCents": 121300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Buenos Aires",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "EZE",
+              "departure": "2026-11-16",
+              "returnDate": "2026-11-19",
+              "priceCents": 122000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Montevidéu",
+              "country": "Uruguai",
+              "origin": "GRU",
+              "destinationAirport": "MVD",
+              "departure": "2026-12-01",
+              "returnDate": "2026-12-07",
+              "priceCents": 180700,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMDlqcDMaIxIKMjAyNi0xMi0wN2oMCAISCC9tLzA5anAzcgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dqY2d3c1FBaG9EUWxKTU9EaHczSllD&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Mendoza",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "MDZ",
+              "departure": "2026-12-01",
+              "returnDate": "2026-12-04",
+              "priceCents": 188600,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAhIJL20vMDJtdHd0GiQSCjIwMjYtMTItMDRqDQgCEgkvbS8wMm10d3RyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2pld0FzUUFob0RRbEpNT0RodzRhSUM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Punta Cana",
+              "country": "República Dominicana",
+              "origin": "GRU",
+              "destinationAirport": "PUJ",
+              "departure": "2027-03-09",
+              "returnDate": "2027-03-15",
+              "priceCents": 194100,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTA5agcIARIDR1JVcg0IAhIJL20vMDVzYzdnGiQSCjIwMjctMDMtMTVqDQgCEgkvbS8wNXNjN2dyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUY2FDd2p0NndzUUFob0RRbEpNT0Rod282c0M&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Bogotá",
+              "country": "Colômbia",
+              "origin": "GRU",
+              "destinationAirport": "BOG",
+              "departure": "2027-03-17",
+              "returnDate": "2027-03-21",
+              "priceCents": 196500,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTE3agcIARIDR1JVcg0IAhIJL20vMDFkenljGiQSCjIwMjctMDMtMjFqDQgCEgkvbS8wMWR6eWNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pOL2dzUUFob0RRbEpNT0Rody9hNEM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Lima",
+              "country": "Peru",
+              "origin": "GRU",
+              "destinationAirport": "LIM",
+              "departure": "2026-10-21",
+              "returnDate": "2026-10-26",
+              "priceCents": 201900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTIxagcIARIDR1JVcgwIAhIIL20vMGxwZmgaIxIKMjAyNi0xMC0yNmoMCAISCC9tLzBscGZocgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dpcXFRd1FBaG9EUWxKTU9EaHd0YmND&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Bariloche",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "BRC",
+              "departure": "2026-11-14",
+              "returnDate": "2026-11-18",
+              "priceCents": 207000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE0agcIARIDR1JVcg0IAhIJL20vMDM3NXA5GiQSCjIwMjYtMTEtMThqDQgCEgkvbS8wMzc1cDlyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2pSMEF3UUFob0RRbEpNT0Rod2xyOEM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Cancún",
+              "country": "México",
+              "origin": "GRU",
+              "destinationAirport": "CUN",
+              "departure": "2027-02-12",
+              "returnDate": "2027-02-24",
+              "priceCents": 229800,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTEyagcIARIDR1JVcg0IAhIJL20vMDFxOThtGiQSCjIwMjctMDItMjRqDQgCEgkvbS8wMXE5OG1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUa2FDd2phZ2c0UUFob0RRbEpNT0Rod3F1SUM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Cidade do Panamá",
+              "country": "Panamá",
+              "origin": "GRU",
+              "destinationAirport": "PTY",
+              "departure": "2026-10-24",
+              "returnDate": "2026-10-27",
+              "priceCents": 250100,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI0agcIARIDR1JVcgwIAhIIL20vMGZyX2IaIxIKMjAyNi0xMC0yN2oMCAISCC9tLzBmcl9icgcIARIDR1JVQAFIAVIDQlJMeoABQ2pSSWMwMHRVMDlhYzNOV05qaEJTRTkzUjJkQ1J5MHRMUzB0TFMwdExXTm5lbUl4T0VGQlFVRkJSM0pVWnpSUlRVdHZVbTlCRWhORVpXRnNRMjl1YzNSeVlXbHVkSE13TFRFd0dnc0l6cUVQRUFJYUEwSlNURGc0Y05xQkF3PT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            }
+          ],
+          "warnings": [
+            "CGH: Datas fora do horizonte confirmado"
+          ]
+        }
+      ],
+      "Prévia sem envio": [
+        {
+          "category": "nacionais",
+          "status": "complete",
+          "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMenores preços encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 1/2\n\n1. <b>Curitiba</b> (Brasil)\nGRU → CWB\nIda: 17/11/2026 | Volta: 24/11/2026\nR$ 449,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Belo Horizonte</b> (Brasil)\nGRU → CNF\nIda: 16/12/2026 | Volta: 21/12/2026\nR$ 539,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTE2agcIARIDR1JVcgwIAhIIL20vMGwzcTIaIxIKMjAyNi0xMi0yMWoMCAISCC9tLzBsM3EycgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dqdXBBTVFBaG9EUWxKTU9EaHdqRk09&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Florianópolis</b> (Brasil)\nCGH → FLN\nIda: 15/01/2027 | Volta: 18/01/2027\nR$ 583,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI3LTAxLTE1agcIARIDQ0dIchEIAhINL2cvMTFiYzZ4bHBwZBooEgoyMDI3LTAxLTE4ahEIAhINL2cvMTFiYzZ4bHBwZHIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRrYUN3aTF4d01RQWhvRFFsSk1PRGh3OVZrPQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Rio de Janeiro</b> (Brasil)\nCGH → GIG\nIda: 02/12/2026 | Volta: 16/12/2026\nR$ 603,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAyagcIARIDQ0dIcgwIAhIIL20vMDZnbXIaIxIKMjAyNi0xMi0xNmoMCAISCC9tLzA2Z21ycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaE5FWldGc1EyOXVjM1J5WVdsdWRITXdMVEV3R2dzSTFkWURFQUlhQTBKU1REZzRjUFpj&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Navegantes</b> (Brasil)\nCGH → NVT\nIda: 16/12/2026 | Volta: 19/12/2026\nR$ 637,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTE2agcIARIDQ0dIcg0IAhIJL20vMDhncHhmGiQSCjIwMjYtMTItMTlqDQgCEgkvbS8wOGdweGZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURXhHZ3NJKy9BREVBSWFBMEpTVERnNGNJOWk&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n6. <b>Vitória</b> (Brasil)\nGRU → VIX\nIda: 17/11/2026 | Volta: 25/11/2026\nR$ 668,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDJ5ZHAzGiQSCjIwMjYtMTEtMjVqDQgCEgkvbS8wMnlkcDNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUWWFDd2pNaVFRUUFob0RRbEpNT0Rody9XWT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nCobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+          "chatId": "",
+          "dryRun": true
+        },
+        {
+          "category": "nacionais",
+          "status": "complete",
+          "text": "<b>Voos nacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMenores preços encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nPesquisa concluída na cobertura disponível.\nParte 2/2\n\n7. <b>Goiânia</b> (Brasil)\nGRU → GYN\nIda: 02/12/2026 | Volta: 08/12/2026\nR$ 726,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTEyLTAyagcIARIDR1JVchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTEyLTA4ahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0dSVUABSAFSA0JSTHp8Q2pSSU0xWlBYMjFWTmxOelNtOUJRekptUW1kQ1J5MHRMUzB0TFdOblpIcDNNeTF1TWtGQlFVRkJSM0pVWnpSUlFXVXpSMUZCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRjYUN3aVZ0d1FRQWhvRFFsSk1PRGh3L1c4PQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Cuiabá</b> (Brasil)\nGRU → CGB\nIda: 27/10/2026 | Volta: 08/11/2026\nR$ 782,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEwLTI3agcIARIDR1JVcg0IAhIJL20vMDMzeWhrGiQSCjIwMjYtMTEtMDhqDQgCEgkvbS8wMzN5aGtyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURXlHZ3NJditJRUVBSWFBMEpTVERnNGNNUjQ&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Brasília</b> (Brasil)\nGRU → BSB\nIda: 14/11/2026 | Volta: 17/11/2026\nR$ 790,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTE0agcIARIDR1JVcgwIAhIIL20vMDFoeV8aIxIKMjAyNi0xMS0xN2oMCAISCC9tLzAxaHlfcgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaE5FWldGc1EyOXVjM1J5WVdsdWRITXdMVEV6R2dzSSt1Z0VFQUlhQTBKU1REZzRjT2Q1&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Porto Alegre</b> (Brasil)\nGRU → POA\nIda: 16/12/2026 | Volta: 22/12/2026\nR$ 823,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTE2agcIARIDR1JVcg0IAhIJL20vMDE3NTc1GiQSCjIwMjYtMTItMjJqDQgCEgkvbS8wMTc1NzVyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURTBHZ3NJc0lJRkVBSWFBMEpTVERnNGNPbCs&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nCobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+          "chatId": "",
+          "dryRun": true
+        },
+        {
+          "category": "internacionais",
+          "status": "partial",
+          "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMenores preços encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 1/2\n\n1. <b>Santiago</b> (Chile)\nGRU → SCL\nIda: 05/11/2026 | Volta: 08/11/2026\nR$ 1.213,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n2. <b>Buenos Aires</b> (Argentina)\nGRU → EZE\nIda: 16/11/2026 | Volta: 19/11/2026\nR$ 1.220,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n3. <b>Montevidéu</b> (Uruguai)\nGRU → MVD\nIda: 01/12/2026 | Volta: 07/12/2026\nR$ 1.807,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMDlqcDMaIxIKMjAyNi0xMi0wN2oMCAISCC9tLzA5anAzcgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dqY2d3c1FBaG9EUWxKTU9EaHczSllD&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n4. <b>Mendoza</b> (Argentina)\nGRU → MDZ\nIda: 01/12/2026 | Volta: 04/12/2026\nR$ 1.886,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAhIJL20vMDJtdHd0GiQSCjIwMjYtMTItMDRqDQgCEgkvbS8wMm10d3RyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2pld0FzUUFob0RRbEpNT0RodzRhSUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n5. <b>Punta Cana</b> (República Dominicana)\nGRU → PUJ\nIda: 09/03/2027 | Volta: 15/03/2027\nR$ 1.941,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTA5agcIARIDR1JVcg0IAhIJL20vMDVzYzdnGiQSCjIwMjctMDMtMTVqDQgCEgkvbS8wNXNjN2dyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUY2FDd2p0NndzUUFob0RRbEpNT0Rod282c0M&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n6. <b>Bogotá</b> (Colômbia)\nGRU → BOG\nIda: 17/03/2027 | Volta: 21/03/2027\nR$ 1.965,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTE3agcIARIDR1JVcg0IAhIJL20vMDFkenljGiQSCjIwMjctMDMtMjFqDQgCEgkvbS8wMWR6eWNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pOL2dzUUFob0RRbEpNT0Rody9hNEM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nCobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+          "chatId": "",
+          "dryRun": true
+        },
+        {
+          "category": "internacionais",
+          "status": "partial",
+          "text": "<b>Voos internacionais</b>\n17/10/2026, 11:00:00 — São Paulo\nMenores preços encontrados\nPróximos 6 meses (janela confirmada na fonte).\n1 adulto • econômica • ida e volta • BRL • 3–14 dias\nResultado parcial: parte da pesquisa não pôde ser concluída.\nParte 2/2\n\n7. <b>Lima</b> (Peru)\nGRU → LIM\nIda: 21/10/2026 | Volta: 26/10/2026\nR$ 2.019,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTIxagcIARIDR1JVcgwIAhIIL20vMGxwZmgaIxIKMjAyNi0xMC0yNmoMCAISCC9tLzBscGZocgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dpcXFRd1FBaG9EUWxKTU9EaHd0YmND&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n8. <b>Bariloche</b> (Argentina)\nGRU → BRC\nIda: 14/11/2026 | Volta: 18/11/2026\nR$ 2.070,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE0agcIARIDR1JVcg0IAhIJL20vMDM3NXA5GiQSCjIwMjYtMTEtMThqDQgCEgkvbS8wMzc1cDlyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2pSMEF3UUFob0RRbEpNT0Rod2xyOEM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n9. <b>Cancún</b> (México)\nGRU → CUN\nIda: 12/02/2027 | Volta: 24/02/2027\nR$ 2.298,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTEyagcIARIDR1JVcg0IAhIJL20vMDFxOThtGiQSCjIwMjctMDItMjRqDQgCEgkvbS8wMXE5OG1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUa2FDd2phZ2c0UUFob0RRbEpNT0Rod3F1SUM&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\n10. <b>Cidade do Panamá</b> (Panamá)\nGRU → PTY\nIda: 24/10/2026 | Volta: 27/10/2026\nR$ 2.501,00 por pessoa\n<a href=\"https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI0agcIARIDR1JVcgwIAhIIL20vMGZyX2IaIxIKMjAyNi0xMC0yN2oMCAISCC9tLzBmcl9icgcIARIDR1JVQAFIAVIDQlJMeoABQ2pSSWMwMHRVMDlhYzNOV05qaEJTRTkzUjJkQ1J5MHRMUzB0TFMwdExXTm5lbUl4T0VGQlFVRkJSM0pVWnpSUlRVdHZVbTlCRWhORVpXRnNRMjl1YzNSeVlXbHVkSE13TFRFd0dnc0l6cUVQRUFJYUEwSlNURGc0Y05xQkF3PT0&amp;curr=BRL&amp;hl=pt-BR&amp;gl=BR&amp;gsas=1\">Consultar voo</a>\n\nAvisos: CGH: Datas fora do horizonte confirmado\nCobertura limitada aos destinos e cards retornados pelo Google. Preços e disponibilidade podem mudar.",
+          "chatId": "",
+          "dryRun": true
+        }
+      ],
+      "Verificar envios": []
+    },
+    "attempts": {
+      "nacionais": [
+        {
+          "origin": "GRU",
+          "attempt": 1
+        },
+        {
+          "origin": "CGH",
+          "attempt": 1
+        }
+      ],
+      "internacionais": [
+        {
+          "origin": "GRU",
+          "attempt": 1
+        },
+        {
+          "origin": "CGH",
+          "attempt": 1
+        }
+      ]
+    }
+  },
+  "send": {
+    "lastNode": "Verificar envios",
+    "results": {
+      "Resumo nacionais": [
+        {
+          "category": "nacionais",
+          "searchedAt": "2026-10-17T14:00:00Z",
+          "today": "2026-10-17",
+          "horizonMonths": 6,
+          "status": "complete",
+          "offers": [
+            {
+              "category": "nacionais",
+              "destination": "Curitiba",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "CWB",
+              "departure": "2026-11-17",
+              "returnDate": "2026-11-24",
+              "priceCents": 44900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDI4bXByGiQSCjIwMjYtMTEtMjRqDQgCEgkvbS8wMjhtcHJyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pXM2dJUUFob0RRbEpNT0Rod25rVT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Belo Horizonte",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "CNF",
+              "departure": "2026-12-16",
+              "returnDate": "2026-12-21",
+              "priceCents": 53900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTE2agcIARIDR1JVcgwIAhIIL20vMGwzcTIaIxIKMjAyNi0xMi0yMWoMCAISCC9tLzBsM3EycgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dqdXBBTVFBaG9EUWxKTU9EaHdqRk09&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Florianópolis",
+              "country": "Brasil",
+              "origin": "CGH",
+              "destinationAirport": "FLN",
+              "departure": "2027-01-15",
+              "returnDate": "2027-01-18",
+              "priceCents": 58300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI3LTAxLTE1agcIARIDQ0dIchEIAhINL2cvMTFiYzZ4bHBwZBooEgoyMDI3LTAxLTE4ahEIAhINL2cvMTFiYzZ4bHBwZHIHCAESA0NHSEABSAFSA0JSTHp8Q2pSSVlrUlpVbTFoWWtGd1EyOUJSelZGYm5kQ1J5MHRMUzB0TFMwdFkyVmlZM014TWtGQlFVRkJSM0pVWnpSUlJuZExXVTFCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRrYUN3aTF4d01RQWhvRFFsSk1PRGh3OVZrPQ&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Rio de Janeiro",
+              "country": "Brasil",
+              "origin": "CGH",
+              "destinationAirport": "GIG",
+              "departure": "2026-12-02",
+              "returnDate": "2026-12-16",
+              "priceCents": 60300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAyagcIARIDQ0dIcgwIAhIIL20vMDZnbXIaIxIKMjAyNi0xMi0xNmoMCAISCC9tLzA2Z21ycgcIARIDQ0dIQAFIAVIDQlJMenxDalJJWWtSWlVtMWhZa0Z3UTI5QlJ6VkZibmRDUnkwdExTMHRMUzB0WTJWaVkzTXhNa0ZCUVVGQlIzSlVaelJSUm5kTFdVMUJFaE5FWldGc1EyOXVjM1J5WVdsdWRITXdMVEV3R2dzSTFkWURFQUlhQTBKU1REZzRjUFpj&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Navegantes",
+              "country": "Brasil",
+              "origin": "CGH",
+              "destinationAirport": "NVT",
+              "departure": "2026-12-16",
+              "returnDate": "2026-12-19",
+              "priceCents": 63700,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTE2agcIARIDQ0dIcg0IAhIJL20vMDhncHhmGiQSCjIwMjYtMTItMTlqDQgCEgkvbS8wOGdweGZyBwgBEgNDR0hAAUgBUgNCUkx6fENqUklZa1JaVW0xaFlrRndRMjlCUnpWRmJuZENSeTB0TFMwdExTMHRZMlZpWTNNeE1rRkJRVUZCUjNKVVp6UlJSbmRMV1UxQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURXhHZ3NJKy9BREVBSWFBMEpTVERnNGNJOWk&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Vitória",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "VIX",
+              "departure": "2026-11-17",
+              "returnDate": "2026-11-25",
+              "priceCents": 66800,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE3agcIARIDR1JVcg0IAhIJL20vMDJ5ZHAzGiQSCjIwMjYtMTEtMjVqDQgCEgkvbS8wMnlkcDNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUWWFDd2pNaVFRUUFob0RRbEpNT0Rody9XWT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Goiânia",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "GYN",
+              "departure": "2026-12-02",
+              "returnDate": "2026-12-08",
+              "priceCents": 72600,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhooEgoyMDI2LTEyLTAyagcIARIDR1JVchEIAhINL2cvMTFiNl9rM3Y2ORooEgoyMDI2LTEyLTA4ahEIAhINL2cvMTFiNl9rM3Y2OXIHCAESA0dSVUABSAFSA0JSTHp8Q2pSSU0xWlBYMjFWTmxOelNtOUJRekptUW1kQ1J5MHRMUzB0TFdOblpIcDNNeTF1TWtGQlFVRkJSM0pVWnpSUlFXVXpSMUZCRWhKRVpXRnNRMjl1YzNSeVlXbHVkSE13TFRjYUN3aVZ0d1FRQWhvRFFsSk1PRGh3L1c4PQ&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Cuiabá",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "CGB",
+              "departure": "2026-10-27",
+              "returnDate": "2026-11-08",
+              "priceCents": 78200,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEwLTI3agcIARIDR1JVcg0IAhIJL20vMDMzeWhrGiQSCjIwMjYtMTEtMDhqDQgCEgkvbS8wMzN5aGtyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURXlHZ3NJditJRUVBSWFBMEpTVERnNGNNUjQ&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Brasília",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "BSB",
+              "departure": "2026-11-14",
+              "returnDate": "2026-11-17",
+              "priceCents": 79000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTE0agcIARIDR1JVcgwIAhIIL20vMDFoeV8aIxIKMjAyNi0xMS0xN2oMCAISCC9tLzAxaHlfcgcIARIDR1JVQAFIAVIDQlJMenxDalJJTTFaUFgyMVZObE56U205QlF6Sm1RbWRDUnkwdExTMHRMV05uWkhwM015MXVNa0ZCUVVGQlIzSlVaelJSUVdVelIxRkJFaE5FWldGc1EyOXVjM1J5WVdsdWRITXdMVEV6R2dzSSt1Z0VFQUlhQTBKU1REZzRjT2Q1&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "nacionais",
+              "destination": "Porto Alegre",
+              "country": "Brasil",
+              "origin": "GRU",
+              "destinationAirport": "POA",
+              "departure": "2026-12-16",
+              "returnDate": "2026-12-22",
+              "priceCents": 82300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTE2agcIARIDR1JVcg0IAhIJL20vMDE3NTc1GiQSCjIwMjYtMTItMjJqDQgCEgkvbS8wMTc1NzVyBwgBEgNHUlVAAUgBUgNCUkx6fENqUklNMVpQWDIxVk5sTnpTbTlCUXpKbVFtZENSeTB0TFMwdExXTm5aSHAzTXkxdU1rRkJRVUZCUjNKVVp6UlJRV1V6UjFGQkVoTkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURTBHZ3NJc0lJRkVBSWFBMEpTVERnNGNPbCs&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "Resumo internacionais": [
+        {
+          "category": "internacionais",
+          "searchedAt": "2026-10-17T14:00:00Z",
+          "today": "2026-10-17",
+          "horizonMonths": 6,
+          "status": "partial",
+          "offers": [
+            {
+              "category": "internacionais",
+              "destination": "Santiago",
+              "country": "Chile",
+              "origin": "GRU",
+              "destinationAirport": "SCL",
+              "departure": "2026-11-05",
+              "returnDate": "2026-11-08",
+              "priceCents": 121300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Buenos Aires",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "EZE",
+              "departure": "2026-11-16",
+              "returnDate": "2026-11-19",
+              "priceCents": 122000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Montevidéu",
+              "country": "Uruguai",
+              "origin": "GRU",
+              "destinationAirport": "MVD",
+              "departure": "2026-12-01",
+              "returnDate": "2026-12-07",
+              "priceCents": 180700,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMDlqcDMaIxIKMjAyNi0xMi0wN2oMCAISCC9tLzA5anAzcgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dqY2d3c1FBaG9EUWxKTU9EaHczSllD&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Mendoza",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "MDZ",
+              "departure": "2026-12-01",
+              "returnDate": "2026-12-04",
+              "priceCents": 188600,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAhIJL20vMDJtdHd0GiQSCjIwMjYtMTItMDRqDQgCEgkvbS8wMm10d3RyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2pld0FzUUFob0RRbEpNT0RodzRhSUM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Punta Cana",
+              "country": "República Dominicana",
+              "origin": "GRU",
+              "destinationAirport": "PUJ",
+              "departure": "2027-03-09",
+              "returnDate": "2027-03-15",
+              "priceCents": 194100,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTA5agcIARIDR1JVcg0IAhIJL20vMDVzYzdnGiQSCjIwMjctMDMtMTVqDQgCEgkvbS8wNXNjN2dyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUY2FDd2p0NndzUUFob0RRbEpNT0Rod282c0M&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Bogotá",
+              "country": "Colômbia",
+              "origin": "GRU",
+              "destinationAirport": "BOG",
+              "departure": "2027-03-17",
+              "returnDate": "2027-03-21",
+              "priceCents": 196500,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTE3agcIARIDR1JVcg0IAhIJL20vMDFkenljGiQSCjIwMjctMDMtMjFqDQgCEgkvbS8wMWR6eWNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pOL2dzUUFob0RRbEpNT0Rody9hNEM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Lima",
+              "country": "Peru",
+              "origin": "GRU",
+              "destinationAirport": "LIM",
+              "departure": "2026-10-21",
+              "returnDate": "2026-10-26",
+              "priceCents": 201900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTIxagcIARIDR1JVcgwIAhIIL20vMGxwZmgaIxIKMjAyNi0xMC0yNmoMCAISCC9tLzBscGZocgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dpcXFRd1FBaG9EUWxKTU9EaHd0YmND&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Bariloche",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "BRC",
+              "departure": "2026-11-14",
+              "returnDate": "2026-11-18",
+              "priceCents": 207000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE0agcIARIDR1JVcg0IAhIJL20vMDM3NXA5GiQSCjIwMjYtMTEtMThqDQgCEgkvbS8wMzc1cDlyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2pSMEF3UUFob0RRbEpNT0Rod2xyOEM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Cancún",
+              "country": "México",
+              "origin": "GRU",
+              "destinationAirport": "CUN",
+              "departure": "2027-02-12",
+              "returnDate": "2027-02-24",
+              "priceCents": 229800,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTEyagcIARIDR1JVcg0IAhIJL20vMDFxOThtGiQSCjIwMjctMDItMjRqDQgCEgkvbS8wMXE5OG1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUa2FDd2phZ2c0UUFob0RRbEpNT0Rod3F1SUM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Cidade do Panamá",
+              "country": "Panamá",
+              "origin": "GRU",
+              "destinationAirport": "PTY",
+              "departure": "2026-10-24",
+              "returnDate": "2026-10-27",
+              "priceCents": 250100,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI0agcIARIDR1JVcgwIAhIIL20vMGZyX2IaIxIKMjAyNi0xMC0yN2oMCAISCC9tLzBmcl9icgcIARIDR1JVQAFIAVIDQlJMeoABQ2pSSWMwMHRVMDlhYzNOV05qaEJTRTkzUjJkQ1J5MHRMUzB0TFMwdExXTm5lbUl4T0VGQlFVRkJSM0pVWnpSUlRVdHZVbTlCRWhORVpXRnNRMjl1YzNSeVlXbHVkSE13TFRFd0dnc0l6cUVQRUFJYUEwSlNURGc0Y05xQkF3PT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            }
+          ],
+          "warnings": [
+            "CGH: Datas fora do horizonte confirmado"
+          ]
+        }
+      ],
+      "Prévia sem envio": [],
+      "Verificar envios": [
+        {
+          "category": "nacionais",
+          "sent": true,
+          "error": null
+        },
+        {
+          "category": "nacionais",
+          "sent": true,
+          "error": null
+        },
+        {
+          "category": "internacionais",
+          "sent": true,
+          "error": null
+        },
+        {
+          "category": "internacionais",
+          "sent": true,
+          "error": null
+        }
+      ]
+    },
+    "attempts": {
+      "nacionais": [
+        {
+          "origin": "GRU",
+          "attempt": 1
+        },
+        {
+          "origin": "CGH",
+          "attempt": 1
+        }
+      ],
+      "internacionais": [
+        {
+          "origin": "GRU",
+          "attempt": 1
+        },
+        {
+          "origin": "CGH",
+          "attempt": 1
+        }
+      ]
+    }
+  },
+  "retry": {
+    "lastNode": "Verificar envios",
+    "results": {
+      "Resumo nacionais": [
+        {
+          "category": "nacionais",
+          "searchedAt": "2026-10-17T14:00:00Z",
+          "today": "2026-10-17",
+          "horizonMonths": null,
+          "status": "failed",
+          "offers": [],
+          "warnings": [
+            "Falha HTTP na consulta GRU",
+            "Falha HTTP na consulta CGH"
+          ]
+        }
+      ],
+      "Resumo internacionais": [
+        {
+          "category": "internacionais",
+          "searchedAt": "2026-10-17T14:00:00Z",
+          "today": "2026-10-17",
+          "horizonMonths": 6,
+          "status": "partial",
+          "offers": [
+            {
+              "category": "internacionais",
+              "destination": "Santiago",
+              "country": "Chile",
+              "origin": "GRU",
+              "destinationAirport": "SCL",
+              "departure": "2026-11-05",
+              "returnDate": "2026-11-08",
+              "priceCents": 121300,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTExLTA1agcIARIDR1JVcgwIAhIIL20vMGRscXYaIxIKMjAyNi0xMS0wOGoMCAISCC9tLzBkbHF2cgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVElhQ3dpQnN3Y1FBaG9EUWxKTU9EaHcvTG9C&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Buenos Aires",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "EZE",
+              "departure": "2026-11-16",
+              "returnDate": "2026-11-19",
+              "priceCents": 122000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE2agcIARIDR1JVcg0IAhIJL20vMDFseTVtGiQSCjIwMjYtMTEtMTlqDQgCEgkvbS8wMWx5NW1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUQWFDd2pHdUFjUUFob0RRbEpNT0Rod2lMd0I&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Montevidéu",
+              "country": "Uruguai",
+              "origin": "GRU",
+              "destinationAirport": "MVD",
+              "departure": "2026-12-01",
+              "returnDate": "2026-12-07",
+              "priceCents": 180700,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEyLTAxagcIARIDR1JVcgwIAhIIL20vMDlqcDMaIxIKMjAyNi0xMi0wN2oMCAISCC9tLzA5anAzcgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVFlhQ3dqY2d3c1FBaG9EUWxKTU9EaHczSllD&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Mendoza",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "MDZ",
+              "departure": "2026-12-01",
+              "returnDate": "2026-12-04",
+              "priceCents": 188600,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTEyLTAxagcIARIDR1JVcg0IAhIJL20vMDJtdHd0GiQSCjIwMjYtMTItMDRqDQgCEgkvbS8wMm10d3RyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xURWFDd2pld0FzUUFob0RRbEpNT0RodzRhSUM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Punta Cana",
+              "country": "República Dominicana",
+              "origin": "GRU",
+              "destinationAirport": "PUJ",
+              "departure": "2027-03-09",
+              "returnDate": "2027-03-15",
+              "priceCents": 194100,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTA5agcIARIDR1JVcg0IAhIJL20vMDVzYzdnGiQSCjIwMjctMDMtMTVqDQgCEgkvbS8wNXNjN2dyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUY2FDd2p0NndzUUFob0RRbEpNT0Rod282c0M&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Bogotá",
+              "country": "Colômbia",
+              "origin": "GRU",
+              "destinationAirport": "BOG",
+              "departure": "2027-03-17",
+              "returnDate": "2027-03-21",
+              "priceCents": 196500,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAzLTE3agcIARIDR1JVcg0IAhIJL20vMDFkenljGiQSCjIwMjctMDMtMjFqDQgCEgkvbS8wMWR6eWNyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUTWFDd2pOL2dzUUFob0RRbEpNT0Rody9hNEM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Lima",
+              "country": "Peru",
+              "origin": "GRU",
+              "destinationAirport": "LIM",
+              "departure": "2026-10-21",
+              "returnDate": "2026-10-26",
+              "priceCents": 201900,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTIxagcIARIDR1JVcgwIAhIIL20vMGxwZmgaIxIKMjAyNi0xMC0yNmoMCAISCC9tLzBscGZocgcIARIDR1JVQAFIAVIDQlJMenxDalJJYzAwdFUwOWFjM05XTmpoQlNFOTNSMmRDUnkwdExTMHRMUzB0TFdObmVtSXhPRUZCUVVGQlIzSlVaelJSVFV0dlVtOUJFaEpFWldGc1EyOXVjM1J5WVdsdWRITXdMVGdhQ3dpcXFRd1FBaG9EUWxKTU9EaHd0YmND&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Bariloche",
+              "country": "Argentina",
+              "origin": "GRU",
+              "destinationAirport": "BRC",
+              "departure": "2026-11-14",
+              "returnDate": "2026-11-18",
+              "priceCents": 207000,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI2LTExLTE0agcIARIDR1JVcg0IAhIJL20vMDM3NXA5GiQSCjIwMjYtMTEtMThqDQgCEgkvbS8wMzc1cDlyBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUUWFDd2pSMEF3UUFob0RRbEpNT0Rod2xyOEM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Cancún",
+              "country": "México",
+              "origin": "GRU",
+              "destinationAirport": "CUN",
+              "departure": "2027-02-12",
+              "returnDate": "2027-02-24",
+              "priceCents": 229800,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhokEgoyMDI3LTAyLTEyagcIARIDR1JVcg0IAhIJL20vMDFxOThtGiQSCjIwMjctMDItMjRqDQgCEgkvbS8wMXE5OG1yBwgBEgNHUlVAAUgBUgNCUkx6fENqUkljMDB0VTA5YWMzTldOamhCU0U5M1IyZENSeTB0TFMwdExTMHRMV05uZW1JeE9FRkJRVUZCUjNKVVp6UlJUVXR2VW05QkVoSkVaV0ZzUTI5dWMzUnlZV2x1ZEhNd0xUa2FDd2phZ2c0UUFob0RRbEpNT0Rod3F1SUM&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            },
+            {
+              "category": "internacionais",
+              "destination": "Cidade do Panamá",
+              "country": "Panamá",
+              "origin": "GRU",
+              "destinationAirport": "PTY",
+              "departure": "2026-10-24",
+              "returnDate": "2026-10-27",
+              "priceCents": 250100,
+              "currency": "BRL",
+              "url": "https://www.google.com/travel/flights?tfs=CCoQAhojEgoyMDI2LTEwLTI0agcIARIDR1JVcgwIAhIIL20vMGZyX2IaIxIKMjAyNi0xMC0yN2oMCAISCC9tLzBmcl9icgcIARIDR1JVQAFIAVIDQlJMeoABQ2pSSWMwMHRVMDlhYzNOV05qaEJTRTkzUjJkQ1J5MHRMUzB0TFMwdExXTm5lbUl4T0VGQlFVRkJSM0pVWnpSUlRVdHZVbTlCRWhORVpXRnNRMjl1YzNSeVlXbHVkSE13TFRFd0dnc0l6cUVQRUFJYUEwSlNURGc0Y05xQkF3PT0&curr=BRL&hl=pt-BR&gl=BR&gsas=1"
+            }
+          ],
+          "warnings": [
+            "CGH: Datas fora do horizonte confirmado"
+          ]
+        }
+      ],
+      "Prévia sem envio": [],
+      "Verificar envios": [
+        {
+          "category": "nacionais",
+          "sent": true,
+          "error": null
+        },
+        {
+          "category": "internacionais",
+          "sent": true,
+          "error": null
+        },
+        {
+          "category": "internacionais",
+          "sent": true,
+          "error": null
+        }
+      ]
+    },
+    "attempts": {
+      "nacionais": [
+        {
+          "origin": "GRU",
+          "attempt": 1
+        },
+        {
+          "origin": "GRU",
+          "attempt": 2
+        },
+        {
+          "origin": "GRU",
+          "attempt": 3
+        },
+        {
+          "origin": "CGH",
+          "attempt": 1
+        },
+        {
+          "origin": "CGH",
+          "attempt": 2
+        },
+        {
+          "origin": "CGH",
+          "attempt": 3
+        }
+      ],
+      "internacionais": [
+        {
+          "origin": "GRU",
+          "attempt": 1
+        },
+        {
+          "origin": "CGH",
+          "attempt": 1
+        }
+      ]
+    }
+  }
+}

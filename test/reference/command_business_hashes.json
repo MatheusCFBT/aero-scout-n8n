@@ -1,0 +1,8 @@
+{
+  "src/google_flights/page_inspection.mjs": "8d7df75f8339361f3dfa7651f57a0d757351fc896b12348635e38eeca4913690",
+  "src/google_flights/protocol.mjs": "86d26a489d9e12d0b8603c16675604f4309317840279b0c92f705cf1506b779e",
+  "src/google_flights/queries.mjs": "6de69b3ff9b4a4f447c2af2242771e01fe214eda5ae0f349e55cfa9d7fc62c21",
+  "src/offers/parser.mjs": "bf34ea966f45e94ccc428955dbf916997b7643961718eee92794d5271bcc2791",
+  "src/offers/reports.mjs": "205bb1fa6facf4d02be900e780ab90d77804f46eaa78843a04a4d319d7c24c80",
+  "src/telegram/messages.mjs": "17d31fafcb17687b01f8b569dce621b7aacf660c2f41d04ad4d019c99c7a14bb"
+}

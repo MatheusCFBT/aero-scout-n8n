@@ -1,0 +1,1174 @@
+{
+  "name": "Aero Scout — ofertas diárias e Telegram",
+  "nodes": [
+    {
+      "id": "aero-1",
+      "name": "Executar manualmente",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-2",
+      "name": "Todos os dias às 22h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 22 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aero-3",
+      "name": "Configuração",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        80
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-4",
+      "name": "Preparar nacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-5",
+      "name": "Consultar nacionais",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        750,
+        0
+      ],
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "pt-BR,pt;q=0.9"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000,
+          "response": {
+            "response": {
+              "responseFormat": "text",
+              "outputPropertyName": "data",
+              "fullResponse": true,
+              "neverError": true
+            }
+          },
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "aero-6",
+      "name": "Por origem nacionais",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        620,
+        170
+      ],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-7",
+      "name": "Tentativa nacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        700,
+        300
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-8",
+      "name": "Resposta nacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-9",
+      "name": "Repetir nacionais",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1100,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "retry",
+              "leftValue": "={{ $json.attempt < 3 && ($json.error !== null || $json.statusCode === 429 || $json.statusCode >= 500) }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-10",
+      "name": "Aguardar nacionais",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        900,
+        440
+      ],
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "aero-11",
+      "name": "Página nacionais",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1250,
+        0
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "data",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "cards",
+              "cssSelector": "[data-deal-card-index]",
+              "returnValue": "html",
+              "returnArray": true
+            },
+            {
+              "key": "headings",
+              "cssSelector": "h2",
+              "returnArray": true
+            },
+            {
+              "key": "bodyText",
+              "cssSelector": "body",
+              "skipSelectors": "script,style"
+            },
+            {
+              "key": "tripType",
+              "cssSelector": "[aria-label$=\"Tipo de passagem\"]"
+            },
+            {
+              "key": "cabin",
+              "cssSelector": "[aria-label$=\"Classe do assento\"]"
+            },
+            {
+              "key": "passengers",
+              "cssSelector": "[aria-label=\"1 passageiro\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            },
+            {
+              "key": "currency",
+              "cssSelector": "[aria-label=\"Moeda BRL\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            },
+            {
+              "key": "originLabel",
+              "cssSelector": "input[role=\"combobox\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      }
+    },
+    {
+      "id": "aero-12",
+      "name": "Cards nacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-13",
+      "name": "Extrair nacionais",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1750,
+        0
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "data",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "destination",
+              "cssSelector": ".BkHwyb"
+            },
+            {
+              "key": "country",
+              "cssSelector": ".ViT5Db"
+            },
+            {
+              "key": "price",
+              "cssSelector": ".Z96dGf"
+            },
+            {
+              "key": "details",
+              "cssSelector": ".Rha8Ed .lT3Wff",
+              "returnArray": true
+            },
+            {
+              "key": "link",
+              "cssSelector": "a",
+              "returnValue": "attribute",
+              "attribute": "href"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      }
+    },
+    {
+      "id": "aero-14",
+      "name": "Consolidar nacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-15",
+      "name": "Resumo nacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2150,
+        170
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-16",
+      "name": "Preparar internacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        500
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-17",
+      "name": "Consultar internacionais",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        750,
+        500
+      ],
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "pt-BR,pt;q=0.9"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000,
+          "response": {
+            "response": {
+              "responseFormat": "text",
+              "outputPropertyName": "data",
+              "fullResponse": true,
+              "neverError": true
+            }
+          },
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 1000
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "aero-18",
+      "name": "Por origem internacionais",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        620,
+        670
+      ],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-19",
+      "name": "Tentativa internacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        700,
+        800
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-20",
+      "name": "Resposta internacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        500
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-21",
+      "name": "Repetir internacionais",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1100,
+        800
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "retry",
+              "leftValue": "={{ $json.attempt < 3 && ($json.error !== null || $json.statusCode === 429 || $json.statusCode >= 500) }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-22",
+      "name": "Aguardar internacionais",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        900,
+        940
+      ],
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "aero-23",
+      "name": "Página internacionais",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1250,
+        500
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "data",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "cards",
+              "cssSelector": "[data-deal-card-index]",
+              "returnValue": "html",
+              "returnArray": true
+            },
+            {
+              "key": "headings",
+              "cssSelector": "h2",
+              "returnArray": true
+            },
+            {
+              "key": "bodyText",
+              "cssSelector": "body",
+              "skipSelectors": "script,style"
+            },
+            {
+              "key": "tripType",
+              "cssSelector": "[aria-label$=\"Tipo de passagem\"]"
+            },
+            {
+              "key": "cabin",
+              "cssSelector": "[aria-label$=\"Classe do assento\"]"
+            },
+            {
+              "key": "passengers",
+              "cssSelector": "[aria-label=\"1 passageiro\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            },
+            {
+              "key": "currency",
+              "cssSelector": "[aria-label=\"Moeda BRL\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            },
+            {
+              "key": "originLabel",
+              "cssSelector": "input[role=\"combobox\"]",
+              "returnValue": "attribute",
+              "attribute": "aria-label"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      }
+    },
+    {
+      "id": "aero-24",
+      "name": "Cards internacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        500
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-25",
+      "name": "Extrair internacionais",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1750,
+        500
+      ],
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "dataPropertyName": "data",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "destination",
+              "cssSelector": ".BkHwyb"
+            },
+            {
+              "key": "country",
+              "cssSelector": ".ViT5Db"
+            },
+            {
+              "key": "price",
+              "cssSelector": ".Z96dGf"
+            },
+            {
+              "key": "details",
+              "cssSelector": ".Rha8Ed .lT3Wff",
+              "returnArray": true
+            },
+            {
+              "key": "link",
+              "cssSelector": "a",
+              "returnValue": "attribute",
+              "attribute": "href"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      }
+    },
+    {
+      "id": "aero-26",
+      "name": "Consolidar internacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        500
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-27",
+      "name": "Resumo internacionais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2150,
+        670
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-28",
+      "name": "Reunir categorias",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        2250,
+        200
+      ],
+      "parameters": {
+        "mode": "append",
+        "numberInputs": 2
+      }
+    },
+    {
+      "id": "aero-29",
+      "name": "Montar mensagens",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2500,
+        200
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-30",
+      "name": "Somente prévia?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2750,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "dry-run",
+              "leftValue": "={{ $json.dryRun }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-31",
+      "name": "Prévia sem envio",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3000,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-32",
+      "name": "Enviar em ordem",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        3000,
+        350
+      ],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "aero-33",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3250,
+        500
+      ],
+      "parameters": {
+        "resource": "message",
+        "operation": "sendMessage",
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.text }}",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "disable_web_page_preview": true,
+          "appendAttribution": false
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "aero-34",
+      "name": "Registrar envio",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3500,
+        500
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-35",
+      "name": "Verificar envios",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3250,
+        200
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "aero-36",
+      "name": "Leia antes de ativar",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -420
+      ],
+      "parameters": {
+        "content": "## Aero Scout\nInativo e em prévia por padrão.\n1. Leia README.md e VALIDATION.md.\n2. Execute manualmente e confira as duas categorias.\n3. Vincule a credencial Telegram e configure chatId.\n4. Mude dryRun para false e teste o envio.\n5. Publique/ative apenas após validar.\n\nDatas flexíveis: 3–14 dias nos próximos 6 meses. Os destinos são os resolvidos pela fonte na captura versionada; cobertura limitada. Não usa Python.",
+        "height": 340,
+        "width": 430
+      }
+    }
+  ],
+  "connections": {
+    "Executar manualmente": {
+      "main": [
+        [
+          {
+            "node": "Configuração",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Todos os dias às 22h": {
+      "main": [
+        [
+          {
+            "node": "Configuração",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Configuração": {
+      "main": [
+        [
+          {
+            "node": "Preparar nacionais",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Preparar internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar nacionais": {
+      "main": [
+        [
+          {
+            "node": "Por origem nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Por origem nacionais": {
+      "main": [
+        [
+          {
+            "node": "Resumo nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tentativa nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tentativa nacionais": {
+      "main": [
+        [
+          {
+            "node": "Consultar nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consultar nacionais": {
+      "main": [
+        [
+          {
+            "node": "Resposta nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resposta nacionais": {
+      "main": [
+        [
+          {
+            "node": "Repetir nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Repetir nacionais": {
+      "main": [
+        [
+          {
+            "node": "Aguardar nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Página nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aguardar nacionais": {
+      "main": [
+        [
+          {
+            "node": "Tentativa nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Página nacionais": {
+      "main": [
+        [
+          {
+            "node": "Cards nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cards nacionais": {
+      "main": [
+        [
+          {
+            "node": "Extrair nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair nacionais": {
+      "main": [
+        [
+          {
+            "node": "Consolidar nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consolidar nacionais": {
+      "main": [
+        [
+          {
+            "node": "Por origem nacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar internacionais": {
+      "main": [
+        [
+          {
+            "node": "Por origem internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Por origem internacionais": {
+      "main": [
+        [
+          {
+            "node": "Resumo internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tentativa internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tentativa internacionais": {
+      "main": [
+        [
+          {
+            "node": "Consultar internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consultar internacionais": {
+      "main": [
+        [
+          {
+            "node": "Resposta internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resposta internacionais": {
+      "main": [
+        [
+          {
+            "node": "Repetir internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Repetir internacionais": {
+      "main": [
+        [
+          {
+            "node": "Aguardar internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Página internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aguardar internacionais": {
+      "main": [
+        [
+          {
+            "node": "Tentativa internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Página internacionais": {
+      "main": [
+        [
+          {
+            "node": "Cards internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cards internacionais": {
+      "main": [
+        [
+          {
+            "node": "Extrair internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair internacionais": {
+      "main": [
+        [
+          {
+            "node": "Consolidar internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consolidar internacionais": {
+      "main": [
+        [
+          {
+            "node": "Por origem internacionais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resumo nacionais": {
+      "main": [
+        [
+          {
+            "node": "Reunir categorias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resumo internacionais": {
+      "main": [
+        [
+          {
+            "node": "Reunir categorias",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Reunir categorias": {
+      "main": [
+        [
+          {
+            "node": "Montar mensagens",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Montar mensagens": {
+      "main": [
+        [
+          {
+            "node": "Somente prévia?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Somente prévia?": {
+      "main": [
+        [
+          {
+            "node": "Prévia sem envio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Enviar em ordem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar em ordem": {
+      "main": [
+        [
+          {
+            "node": "Verificar envios",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram": {
+      "main": [
+        [
+          {
+            "node": "Registrar envio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Registrar envio": {
+      "main": [
+        [
+          {
+            "node": "Enviar em ordem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Sao_Paulo",
+    "executionTimeout": 1200,
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all"
+  },
+  "pinData": {},
+  "tags": []
+}

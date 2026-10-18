@@ -1,0 +1,62 @@
+[
+  {
+    "path": "src/shared/dates.mjs",
+    "sha256": "39dbfd385ae6c1f2c694203cfbfb34e05d4504599619f2032b2ef7c0e97fd2b4"
+  },
+  {
+    "path": "src/shared/prices.mjs",
+    "sha256": "f7189631d742b76e8a24dfc4b5154c1dec2cbc7bfe11e7a1e3bd2a01f1a725b5"
+  },
+  {
+    "path": "src/shared/settings.mjs",
+    "sha256": "0b7114cbf38878ac4863b83dcd34cceeb89d1558236586bbee10deb3b3d3bc39"
+  },
+  {
+    "path": "src/shared/text.mjs",
+    "sha256": "4b6630f45a19a6e13a1f3b004ff372ef7e26cb2329e0669ef84cf29df5eba415"
+  },
+  {
+    "path": "src/google_flights/flight_dates.mjs",
+    "sha256": "42c266c238544bf06f96e439af98e94f72f3bf67000d527a58e186245b2ae3f3"
+  },
+  {
+    "path": "src/google_flights/live_probe.mjs",
+    "sha256": "078fbb701955e3321c635480bd82c5e8c2f58eb57743842cfa1b8d35c241521d"
+  },
+  {
+    "path": "src/google_flights/page_inspection.mjs",
+    "sha256": "ab859ad9953768b3b3186af0c54b6386f0e5d16a60945eae2dcdb6d7f06d60a0"
+  },
+  {
+    "path": "src/google_flights/protocol.mjs",
+    "sha256": "a871e2a2f756b825e0a0d5ff1dfd9739dca289b395deaecaab69c57492bcc671"
+  },
+  {
+    "path": "src/google_flights/queries.mjs",
+    "sha256": "5f3ab295a72925fe1068209193f370d2a3b7034e6f7949436a2f12b7b767ca9d"
+  },
+  {
+    "path": "src/offers/parser.mjs",
+    "sha256": "97f09e14e428e152f34e168a3f580cf7e553dfa0e01af6e63d28f562d77ba4ba"
+  },
+  {
+    "path": "src/offers/ranking.mjs",
+    "sha256": "c059e866227002a05170cf9483df70f7b2735492c8ffb77a3b7e404d1f27b82b"
+  },
+  {
+    "path": "src/offers/reports.mjs",
+    "sha256": "807b992546ce7d73373fb35a89edccc37635522238439d4b29e3d6409645ad2f"
+  },
+  {
+    "path": "src/telegram/messages.mjs",
+    "sha256": "422fbc6dfcbf639d709c2460638103de806e5b7996e6b3091dce21d4c7b70fc6"
+  },
+  {
+    "path": "data/countries.json",
+    "sha256": "400061bb55da219de89fd265226f497c5f0b364b57e62c2c5ca4882ff2949b30"
+  },
+  {
+    "path": "data/search_templates.json",
+    "sha256": "57fa79162829b564accd1a79142e08cfe2632279a5d7d81b46f60dc41d0c311d"
+  }
+]
