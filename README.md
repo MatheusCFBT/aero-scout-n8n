@@ -1,19 +1,19 @@
 # Aero Scout n8n
 
-Busca ofertas de voos saindo de **GRU e CGH** e envia listas separadas de nacionais e internacionais ao Telegram. Cada lista contém até dez destinos, ordenados pelo **maior desconto percentual informado pelo Google**, com menor preço como desempate.
+Find flight deals departing from **GRU and CGH** and send separate domestic and international lists to Telegram. Each list includes up to ten destinations, ranked by the **highest discount percentage reported by Google**, with lower prices breaking ties.
 
-## Como funciona
+## How it works
 
-- **Comando:** `/ofertas Brasil DD/MM/AA - DD/MM/AA`. Aceita `BR` e `/ofertas@DetectiveFlightBot`. `/start` e `/ajuda` mostram instruções.
-- **Período:** as datas vêm de cada mensagem; o ano é interpretado como `20AA`. Ida e volta devem caber na janela, com duração mínima de um dia. Rejeita datas inválidas, passadas e término igual ou anterior ao início.
-- **Diário:** às **22h de São Paulo**, pesquisa nos próximos seis meses, com duração de 3–14 dias. Comandos não alteram o agendamento.
-- **Critérios:** um adulto, econômica, ida e volta e preços em BRL. O valor mostrado é o total por pessoa.
+- **Command:** `/ofertas Brasil DD/MM/YY - DD/MM/YY`. Also accepts `BR` and `/ofertas@DetectiveFlightBot`. Use `/start` or `/ajuda` for instructions. Bot commands remain in Portuguese.
+- **Travel window:** dates come from each message; years are interpreted as `20YY`. Departure and return must fall within the window, with a minimum trip duration of one day. Invalid or past dates and end dates on or before the start date are rejected.
+- **Daily search:** at **10 PM São Paulo time**, searches the next six months for trips lasting 3–14 days. Commands do not change the schedule.
+- **Criteria:** one adult, economy, round trip, prices in BRL. Displayed prices are the round-trip total per person.
 
-A cobertura depende dos destinos dos templates e dos cards retornados pelo Google; não representa todo o mercado. Ofertas sem desconto percentual explícito ficam fora do ranking. Falhas e resultados parciais são informados separadamente de pesquisas válidas sem ofertas. A fonte precisa confirmar o período consultado.
+Coverage depends on the destinations in the search templates and the cards returned by Google; it does not cover the entire market. Offers without an explicit discount percentage are excluded from the ranking. Failures and partial results are distinguished from successful searches with no offers. The source must confirm the requested travel window.
 
-## Instalação no Docker
+## Docker setup
 
-Use n8n com volume persistente em `/home/node/.n8n`. Instale o receptor local e reinicie o serviço, ajustando o nome do contêiner se necessário:
+Use n8n with a persistent volume at `/home/node/.n8n`. Install the local receiver and restart the service, adjusting the container name if needed:
 
 ```sh
 docker exec n8n-n8n-1 mkdir -p /home/node/.n8n/custom/aero-scout
@@ -21,70 +21,72 @@ docker cp -a src/custom/. n8n-n8n-1:/home/node/.n8n/custom/aero-scout/
 docker restart n8n-n8n-1
 ```
 
-Importe os JSONs no mesmo projeto, nesta ordem:
+Import the JSON files into the same project in this order:
 
-| Arquivo em `workflows/` | Função | ID |
+| File in `workflows/` | Purpose | ID |
 | --- | --- | --- |
-| `aero_scout_query.json` | Consultar ofertas | `AeroScoutFlightQuery` |
-| `aero_scout_delivery.json` | Enviar listas | `AeroScoutTelegramDelivery` |
-| `aero_scout_daily.json` | Principal | `AeroScoutDaily20261017` |
+| `aero_scout_query.json` | Search for offers | `AeroScoutFlightQuery` |
+| `aero_scout_delivery.json` | Deliver lists | `AeroScoutTelegramDelivery` |
+| `aero_scout_daily.json` | Main workflow | `AeroScoutDaily20261017` |
 
-1. No principal, confira os subworkflows selecionados em **Buscar ofertas** e **Enviar listas**, especialmente se a importação mudar seus IDs.
-2. Configure o Telegram conforme abaixo. Os JSONs distribuídos vêm **inativos** e com `dryRun: true` em **Configuração**.
-3. Publique consulta e envio primeiro; publique o principal por último. **Publicar o principal habilita os comandos e o agendamento diário.**
-4. Com `dryRun: true`, confira a prévia na execução do n8n. Altere para `false` e publique a alteração quando quiser enviar ao Telegram.
+Node names below match the Portuguese labels in the workflows.
 
-Mantenha o Docker ligado e apenas um principal publicado. O workflow define `America/Sao_Paulo`; use também `GENERIC_TIMEZONE=America/Sao_Paulo` no serviço n8n.
+1. In the main workflow, check the subworkflows selected in **Buscar ofertas** and **Enviar listas**, especially if importing changes their IDs.
+2. Configure Telegram as described below. Distributed JSON files are **inactive**, with `dryRun: true` in **Configuração**.
+3. Publish the search and delivery subworkflows first, then the main workflow. **Publishing the main workflow enables both bot commands and the daily schedule.**
+4. With `dryRun: true`, inspect the preview in the n8n execution. Set it to `false` and publish the change when you want to send messages to Telegram.
+
+Keep Docker running and only one main workflow published. The workflow uses `America/Sao_Paulo`; also set `GENERIC_TIMEZONE=America/Sao_Paulo` in the n8n service.
 
 ## Telegram
 
-1. Crie o bot no [@BotFather](https://t.me/BotFather), usando `/newbot`, e envie `/start` ao bot criado.
-2. No n8n, crie uma credencial **Telegram API** e coloque o token em **Access Token**. Nunca salve o token no código ou nos JSONs.
-3. Selecione essa credencial em **Receber comandos** e no **Telegram** do subworkflow de envio.
-4. Informe o mesmo chat ID, como string, em **Receber comandos** e **Configuração**. Preserve o sinal negativo para grupos.
+1. Create a bot through [@BotFather](https://t.me/BotFather) using `/newbot`, then send `/start` to your bot.
+2. In n8n, create a **Telegram API** credential and enter the token in **Access Token**. Never store the token in source code or workflow JSON files.
+3. Select that credential in **Receber comandos** and in the delivery subworkflow's **Telegram** node.
+4. Enter the same chat ID, as a string, in **Receber comandos** and **Configuração**. Keep the negative sign for group IDs.
 
-Para descobrir o chat ID localmente, antes de publicar o receptor, use Node.js 22+:
+To find the chat ID locally before publishing the receiver, use Node.js 22+:
 
 ```bash
-read -rsp 'Token do bot: ' AERO_TELEGRAM_TOKEN
+read -rsp 'Bot token: ' AERO_TELEGRAM_TOKEN
 printf '\n'
 printf '%s' "$AERO_TELEGRAM_TOKEN" | node scripts/telegram_chat_id.cjs
 unset AERO_TELEGRAM_TOKEN
 ```
 
-O token é recebido pelo stdin e não é salvo nem impresso. O receptor consulta o Telegram a cada 15 segundos, sem webhook público. Webhook existente ou conflito com outro consumidor interrompem o receptor; nada é removido automaticamente.
+The token is read from stdin and is neither saved nor printed. The receiver polls Telegram every 15 seconds without a public webhook. An existing webhook or a conflict with another consumer stops the receiver; nothing is removed automatically.
 
-O cursor fica em `/home/node/.n8n/aero-scout/bot-ID.json`: preserve esse arquivo ao reiniciar. Mensagens anteriores à primeira ativação são ignoradas. Comandos aceitos não são repetidos automaticamente; uma queda antes do despacho pode exigir que você envie um novo comando.
+The cursor is stored at `/home/node/.n8n/aero-scout/bot-ID.json`; preserve it across restarts. Messages sent before the first activation are ignored. Accepted commands are not automatically replayed; a crash before dispatch may require you to send a new command.
 
-## Falhas e envio
+## Failures and delivery
 
-Consultas têm timeout de 60 segundos e até três tentativas, com espera de três segundos, para falhas transitórias. Uma consulta com falha não impede as demais.
+Search requests have a 60-second timeout and up to three attempts, with a three-second delay for transient failures. A failed query does not prevent the remaining queries from running.
 
-O Telegram recebe nacionais primeiro, depois internacionais, com partes numeradas quando necessário. Todas as mensagens são tentadas; falhas de entrega fazem a execução terminar com erro. Não há reenvio automático: confira o chat antes de repetir uma execução para evitar duplicatas.
+Domestic lists are sent first, followed by international lists, with numbered parts when needed. All messages are attempted; delivery failures cause the execution to finish with an error. Messages are not automatically resent: check the chat before repeating an execution to avoid duplicates.
 
-## Manutenção
+## Maintenance
 
-Requer **Node.js 22+**, sem dependências externas. Edite os fontes e regenere os JSONs; não mantenha mudanças somente no editor do n8n.
+Requires **Node.js 22+**, with no external dependencies. Edit the source files and regenerate the JSON files; do not keep changes only in the n8n editor.
 
-- `src/`: consultas, interpretação, ranking, mensagens, Code nodes e receptor local.
-- `data/`: templates de busca e países reconhecidos. A cobertura muda ao atualizar os templates.
-- `scripts/`: geração, atualização e verificações.
-- `test/`: testes, fixtures e referências. O histórico das verificações está em [VALIDATION.md](VALIDATION.md).
-
-```sh
-npm run build          # Gerar os três JSONs
-npm test               # Testes locais
-npm run format:check   # Sintaxe, espaços e artefatos atualizados
-npm run test:workflow  # Fluxo completo no Docker isolado
-npm run test:receiver  # Receptor com Telegram simulado
-```
-
-Os testes Docker exigem a imagem local `n8nio/n8n:2.43.7` e não usam rede externa ou credenciais reais. `npm run format` normaliza espaços e fins de linha; não é um formatador completo de JavaScript. `npm run probe` consulta a fonte real; `node scripts/build.cjs --probe` gera uma consulta autossuficiente.
-
-Para atualizar uma instalação, guarde um backup dos workflows, sem exportar credenciais, e prepare a migração:
+- `src/`: queries, parsing, ranking, messages, Code node programs, and the local receiver.
+- `data/`: search templates and recognized countries. Updating templates changes coverage.
+- `scripts/`: generation, migration, and checks.
+- `test/`: tests, fixtures, and references.
 
 ```sh
-node scripts/prepare_update.cjs .local_backups/anterior.json /tmp/aero-update.json
+npm run build          # Generate the three workflow JSON files
+npm test               # Run local tests
+npm run format:check   # Check syntax, whitespace, and generated artifacts
+npm run test:workflow  # Test the complete flow in isolated Docker
+npm run test:receiver  # Test the receiver with simulated Telegram
 ```
 
-A migração preserva IDs, configurações, chat, prévia, referências de credencial e estado de ativação. O arquivo preparado contém configuração local e deve ficar fora do Git. Atualize também os arquivos do receptor se mudarem e reinicie o n8n. Importe os subworkflows antes do principal e preserve o estado de ativação existente.
+Docker tests require the local `n8nio/n8n:2.43.7` image and use neither external networking nor real credentials. `npm run format` normalizes whitespace and line endings; it is not a full JavaScript formatter. `npm run probe` queries the real source; `node scripts/build.cjs --probe` generates a standalone query program.
+
+To update an installation, back up the workflows without exporting credentials, then prepare the migration:
+
+```sh
+node scripts/prepare_update.cjs .local_backups/previous.json /tmp/aero-update.json
+```
+
+The migration preserves IDs, settings, chat, preview mode, credential references, and activation state. The prepared file contains local configuration and must stay out of Git. If the receiver files change, update them too and restart n8n. Import subworkflows before the main workflow and preserve the existing activation state.
