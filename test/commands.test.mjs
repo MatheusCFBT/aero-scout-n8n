@@ -79,9 +79,9 @@ test("mensagens mostram janela e aeroportos, sem horizonte diário", () => {
   const context = parse("/ofertas BR 01/06/27 - 30/06/27");
   const result = messages.formatReports([{ ...context, category: "nacionais",
     status: "complete", offers: [], warnings: [] }])[0];
-  assert.match(result.text, /01\/06\/2027 a 30\/06\/2027/);
+  assert.match(result.text, /01\/06\/27 a 30\/06\/27/);
   assert.match(result.text, /GRU e CGH/);
-  assert.match(result.text, /1–29 dias/);
+  assert.match(result.text, /Ida e volta/);
   assert.doesNotMatch(result.text, /Horizonte não confirmado/);
 });
 

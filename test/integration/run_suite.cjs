@@ -42,7 +42,7 @@ function outputItems(result, name) {
 async function main() {
   const folder = process.argv[2];
   const reference = JSON.parse(fs.readFileSync(
-    path.resolve(__dirname, "../reference/discount_workflow_results.json"), "utf8"));
+    path.resolve(__dirname, "../reference/compact_workflow_results.json"), "utf8"));
   const { SCENARIOS } = await import("./fixtures.mjs");
   const requested = process.env.AERO_SCENARIOS?.split(",") || SCENARIOS.filter(s => s !== "windowReplay");
   let requests = [];
@@ -102,7 +102,7 @@ async function main() {
       };
       if (reference[scenario]) {
         assert.deepEqual(current.formatted, reference[scenario].messages,
-          "Mensagens devem preservar a referência do ranking por desconto");
+          "Mensagens devem corresponder à referência compacta das mesmas ofertas");
       }
       if (scenario === "commandInvalid") {
         const replies = outputItems(result, "Enviar listas");
@@ -131,7 +131,7 @@ async function main() {
       for (const category of ["nacionais", "internacionais"]) {
         const text = current.formatted.filter((item) => item.category === category)
           .map((item) => item.text).join("\n");
-        const discounts = [...text.matchAll(/(\d+(?:,\d+)?)% abaixo da média do Google/g)]
+        const discounts = [...text.matchAll(/(\d+(?:,\d+)?)% abaixo da média/g)]
           .map((match) => Number(match[1].replace(",", ".")));
         assert.ok(discounts.every((value, index) => value > 0 &&
           (index === 0 || value <= discounts[index - 1])), "Descontos devem ser decrescentes");
@@ -143,9 +143,9 @@ async function main() {
         const firstNational = current.formatted.find((item) => item.category === "nacionais");
         const firstInternational = current.formatted.find((item) => item.category === "internacionais");
         assert.match(firstNational.text, /1\. <b>Cuiabá<\/b>/);
-        assert.match(firstNational.text, /44% abaixo da média do Google/);
-        assert.match(firstInternational.text, /1\. <b>Cidade do Panamá<\/b>/);
-        assert.match(firstInternational.text, /33% abaixo da média do Google/);
+        assert.match(firstNational.text, /44% abaixo da média/);
+        assert.match(firstInternational.text, /1\. <b>Cidade do Panamá<\/b>, Panamá/);
+        assert.match(firstInternational.text, /33% abaixo da média/);
       }
       const reports = current.reports;
       if (scenario === "empty") {
@@ -176,7 +176,9 @@ async function main() {
         assert.equal(item.attempt, expected);
       }
       if (scenario === "deliveryFailure") {
-        assert.equal(current.messages.length, 4, "Falha não deve impedir mensagens seguintes");
+        assert.ok(current.messages.length > 1);
+        assert.equal(current.messages.length, current.formatted.length,
+          "Falha não deve impedir mensagens seguintes");
       }
       summaries[scenario] = {
         validated: true,

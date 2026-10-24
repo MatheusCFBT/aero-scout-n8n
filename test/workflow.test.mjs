@@ -71,7 +71,7 @@ test("Montar listas usa maior desconto e mantém categorias separadas", async ()
   assert.deepEqual(result.map((item) => item.json.category), ["nacionais", "internacionais"]);
   const text = result[0].json.text;
   assert.ok(text.indexOf("50% abaixo") < text.indexOf("10% abaixo"));
-  assert.match(text, /Maiores descontos percentuais/);
+  assert.match(text, /Descontos em relação à média do Google/);
 });
 
 test("probe gerado é autossuficiente e mantém os pedidos e o formato da saída", async () => {
@@ -144,13 +144,30 @@ test("subworkflow de consulta retorna ofertas sem aplicar o limite de dez", asyn
   assert.ok(!Object.hasOwn(result[0].json, "data"), "não deve retornar o HTML original");
 });
 
-test("fontes preservadas, exceto alterações autorizadas para desconto", () => {
+test("fontes preservadas, exceto alterações autorizadas de negócio e apresentação", () => {
   const files = reference("business_hashes");
   const approvedChanges = {
     ...reference("discount_business_hashes"), ...reference("command_business_hashes"),
+    ...reference("compact_message_hashes"),
   };
   for (const file of files) {
     const contents = readFileSync(new URL("../" + file.path, import.meta.url));
     assert.equal(createHash("sha256").update(contents).digest("hex"), approvedChanges[file.path] || file.sha256, file.path);
+  }
+});
+
+test("referência compacta preserva todas as ofertas e links da referência anterior", () => {
+  const previous = reference("discount_workflow_results");
+  const compact = reference("compact_workflow_results");
+  for (const scenario of ["preview", "send"]) {
+    const texts = data => data[scenario].messages.map(message => message.text).join("\n");
+    const links = data => [...texts(data).matchAll(/href="([^"]+)"/g)].map(match => match[1]);
+    const discounts = data => [...texts(data).matchAll(/([\d,]+)% abaixo da média/g)]
+      .map(match => match[1]);
+    const destinations = data => [...texts(data).matchAll(/\d+\. <b>(.*?)<\/b>/g)]
+      .map(match => match[1]);
+    assert.deepEqual(links(compact), links(previous));
+    assert.deepEqual(discounts(compact), discounts(previous));
+    assert.deepEqual(destinations(compact), destinations(previous));
   }
 });
