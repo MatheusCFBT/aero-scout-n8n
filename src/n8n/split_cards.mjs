@@ -1,6 +1,7 @@
 export function execute({ input, nodes }, { pageInspector }) {
   return input.all().flatMap((item, index) => {
-    const context = nodes.response.itemMatching(index).json;
+    // The response body must not be copied into every card metadata payload.
+    const { data, ...context } = nodes.response.itemMatching(index).json;
     const report = pageInspector.inspectPage(item.json, context);
     const { cards, ...metadata } = report;
     // Keep one sentinel item for empty/failed queries, otherwise HTML nodes would drop the report.

@@ -4,3 +4,5 @@ import "./messages.test.mjs";
 import "./workflow.test.mjs";
 
 import "./commands.test.mjs";
+
+import "./memory.test.mjs";
