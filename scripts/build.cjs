@@ -2,11 +2,6 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 async function main() {
-  if (process.argv.includes("--probe")) {
-    const { assembleProbe } = await import("./workflow/probe_assembler.mjs");
-    process.stdout.write(assembleProbe());
-    return;
-  }
   const { createWorkflows } = await import("./workflow/definition.mjs");
   const { WORKFLOW_FILES } = await import("./workflow/ids.mjs");
   for (const [key, workflow] of Object.entries(createWorkflows())) {

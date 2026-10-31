@@ -45,16 +45,7 @@ Keep Docker running and only one main workflow published. The workflow uses `Ame
 3. Select that credential in **Receber comandos** and in the delivery subworkflow's **Telegram** node.
 4. Enter the same chat ID, as a string, in **Receber comandos** and **Configuração**. Keep the negative sign for group IDs.
 
-To find the chat ID locally before publishing the receiver, use Node.js 22+:
-
-```bash
-read -rsp 'Bot token: ' AERO_TELEGRAM_TOKEN
-printf '\n'
-printf '%s' "$AERO_TELEGRAM_TOKEN" | node scripts/telegram_chat_id.cjs
-unset AERO_TELEGRAM_TOKEN
-```
-
-The token is read from stdin and is neither saved nor printed. The receiver polls Telegram every 15 seconds without a public webhook. An existing webhook or a conflict with another consumer stops the receiver; nothing is removed automatically.
+The receiver polls Telegram every 15 seconds without a public webhook. An existing webhook or a conflict with another consumer stops the receiver; nothing is removed automatically.
 
 The cursor is stored at `/home/node/.n8n/aero-scout/bot-ID.json`; preserve it across restarts. Messages sent before the first activation are ignored. Accepted commands are not automatically replayed; a crash before dispatch may require you to send a new command.
 
@@ -71,17 +62,35 @@ Requires **Node.js 22+**, with no external dependencies. Edit the source files a
 - `src/`: queries, parsing, ranking, messages, Code node programs, and the local receiver.
 - `data/`: search templates and recognized countries. Updating templates changes coverage.
 - `scripts/`: generation, migration, and checks.
-- `test/`: tests, fixtures, and references.
+- `test/unit/`: method behavior tests with small inputs and simulated I/O.
+- `test/integration/`: real n8n workflows and HTTP communication in disposable containers.
 
 ```sh
+npm test               # Run behavior-focused unit tests
 npm run build          # Generate the three workflow JSON files
-npm test               # Run local tests
 npm run format:check   # Check syntax, whitespace, and generated artifacts
-npm run test:workflow  # Test the complete flow in isolated Docker
-npm run test:receiver  # Test the receiver with simulated Telegram
 ```
 
-Docker tests require the local `n8nio/n8n:2.43.7` image and use neither external networking nor real credentials. `npm run format` normalizes whitespace and line endings; it is not a full JavaScript formatter. `npm run probe` queries the real source; `node scripts/build.cjs --probe` generates a standalone query program.
+`npm run format` normalizes whitespace and line endings; it is not a full JavaScript formatter. Unit tests use Node.js’s built-in runner, without Docker, external requests or real credentials.
+
+For integration tests, use Node.js 22.22+ and a Docker-compatible runtime:
+
+```sh
+npm ci
+npm run test:integration
+```
+
+Testcontainers is a development-only dependency. Each scenario starts a fresh n8n 2.43.7
+container pinned by digest, with real SQLite, polling, HTTP requests, HTML extraction and
+Telegram nodes. Only the external Google and Telegram APIs are simulated locally.
+Daily scenarios add a native manual entry to the imported test copy because the n8n
+CLI cannot start schedule/custom triggers directly; all original nodes and connections
+are preserved. Polling scenarios use the original custom trigger.
+The container has no external network access, real credentials or production data.
+Docker and npm may require internet access to download dependencies and images beforehand.
+Tests run sequentially and remove their containers afterward, including on failure.
+The restart case keeps its database and cursor while restarting the real n8n process.
+Docker unavailability is an error, never a skipped or successful test.
 
 To update an installation, back up the workflows without exporting credentials, then prepare the migration:
 
