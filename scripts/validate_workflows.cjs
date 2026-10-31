@@ -2,6 +2,7 @@ const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
 const { spawnSync } = require("node:child_process");
+const { N8N_TEST_IMAGE, pullTestImage } = require("./test_image.cjs");
 
 const root = path.resolve(__dirname, "..");
 const folder = fs.mkdtempSync(path.join(os.tmpdir(), "aero-scout-validation-"));
@@ -18,6 +19,7 @@ function run(program, args) {
 
 try {
   run(process.execPath, [path.join(root, "test/integration/prepare_suite.cjs"), folder]);
+  pullTestImage();
   const args = [
     "run", "--rm", "--name", "aero-scout-workflow-validation", "--network", "none",
     "--mount", "type=bind,source=" + root + ",target=/work,readonly",
@@ -30,7 +32,7 @@ try {
   if (process.env.AERO_SCENARIOS) {
     args.push("-e", "AERO_SCENARIOS=" + process.env.AERO_SCENARIOS);
   }
-  args.push("--entrypoint", "node", "n8nio/n8n:2.43.7",
+  args.push("--entrypoint", "node", N8N_TEST_IMAGE,
     "/work/test/integration/run_suite.cjs", "/suite");
   // Files contain only controlled fixtures and a fake credential; Docker has no external network.
   fs.chmodSync(folder, 0o755);

@@ -1,0 +1,10 @@
+# Request maintainer review for changes that affect execution or test trust.
+/.github/ @MatheusCFBT
+/scripts/ @MatheusCFBT
+/test/ @MatheusCFBT
+/CONTRIBUTING.md @MatheusCFBT
+/Dockerfile* @MatheusCFBT
+/compose*.yml @MatheusCFBT
+/compose*.yaml @MatheusCFBT
+/docker-compose*.yml @MatheusCFBT
+/docker-compose*.yaml @MatheusCFBT

@@ -81,7 +81,7 @@ npm run test:workflow  # Test the complete flow in isolated Docker
 npm run test:receiver  # Test the receiver with simulated Telegram
 ```
 
-Docker tests require the local `n8nio/n8n:2.43.7` image and use neither external networking nor real credentials. `npm run format` normalizes whitespace and line endings; it is not a full JavaScript formatter. `npm run probe` queries the real source; `node scripts/build.cjs --probe` generates a standalone query program.
+Docker tests first pull the n8n 2.43.7 image pinned by registry digest in `scripts/test_image.cjs`; the test containers use neither external networking nor real credentials. `npm run format` normalizes whitespace and line endings; it is not a full JavaScript formatter. `npm run probe` queries the real source; `node scripts/build.cjs --probe` generates a standalone query program.
 
 To update an installation, back up the workflows without exporting credentials, then prepare the migration:
 
@@ -90,3 +90,7 @@ node scripts/prepare_update.cjs .local_backups/previous.json /tmp/aero-update.js
 ```
 
 The migration preserves IDs, settings, chat, preview mode, credential references, and activation state. The prepared file contains local configuration and must stay out of Git. If the receiver files change, update them too and restart n8n. Import subworkflows before the main workflow and preserve the existing activation state.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local checks, offline integration tests and the public pull request security model.

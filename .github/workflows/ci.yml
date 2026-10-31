@@ -1,0 +1,86 @@
+name: Contribution CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# Unspecified scopes, including packages and id-token, have no permissions.
+permissions:
+  contents: read
+
+concurrency:
+  group: contribution-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci-unit:
+    name: ci-unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Unit and regression tests
+        run: npm test
+      - name: Verify sources and committed workflow artifacts before building
+        run: npm run format:check
+      - name: Build workflows
+        run: npm run build
+      - name: Require unchanged generated workflows
+        run: git diff --exit-code -- workflows/
+
+  ci-workflows:
+    name: ci-workflows
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Run complete offline workflow integration suite
+        run: npm run test:workflow
+
+  ci-receiver:
+    name: ci-receiver
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Run offline custom polling node integration
+        run: npm run test:receiver
+
+  ci-required:
+    name: ci-required
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    needs: [ci-unit, ci-workflows, ci-receiver]
+    if: ${{ always() }}
+    permissions: {}
+    steps:
+      # No checkout or repository code runs in the aggregation job.
+      - name: Require successful test jobs
+        env:
+          UNIT_RESULT: ${{ needs.ci-unit.result }}
+          WORKFLOWS_RESULT: ${{ needs.ci-workflows.result }}
+          RECEIVER_RESULT: ${{ needs.ci-receiver.result }}
+        run: |
+          test "$UNIT_RESULT" = success &&
+          test "$WORKFLOWS_RESULT" = success &&
+          test "$RECEIVER_RESULT" = success

@@ -6,3 +6,5 @@ import "./workflow.test.mjs";
 import "./commands.test.mjs";
 
 import "./memory.test.mjs";
+
+import "./ci.test.mjs";
